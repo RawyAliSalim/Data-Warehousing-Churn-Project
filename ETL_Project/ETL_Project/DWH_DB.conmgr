@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
-  DTS:ObjectName="LAPTOP-HGONJJV6_CHURN_PROCESSED.Churn_DWH"
-  DTS:DTSID="{6254F97F-699B-4099-BC23-64F6BA0EDA8E}"
+  DTS:ObjectName="DWH_DB"
+  DTS:DTSID="{54EEDF43-68AD-47C2-B73D-EE7D938C23B5}"
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=LAPTOP-HGONJJV6\CHURN_PROCESSED;Initial Catalog=Churn_DWH;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Trust Server Certificate=True;Application Name=SSIS-ETL_Project-{6254F97F-699B-4099-BC23-64F6BA0EDA8E}LAPTOP-HGONJJV6\CHURN_PROCESSED.Churn_DWH;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=LAPTOP-5Q67MFKR\CHUM;Initial Catalog=Churn_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ETL_Project-{54EEDF43-68AD-47C2-B73D-EE7D938C23B5}LAPTOP-5Q67MFKR\CHUM.Churn_DWH;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

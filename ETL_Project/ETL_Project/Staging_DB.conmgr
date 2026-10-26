@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
-  DTS:ObjectName="LAPTOP-HGONJJV6_SQLEXPRESS01"
-  DTS:DTSID="{D328ACDA-C0D0-4727-808C-2819FB442D3B}"
+  DTS:ObjectName="LAPTOP-5Q67MFKR_SQLEXPRESS01"
+  DTS:DTSID="{0A666918-4BB5-453B-89A6-E1CF4DD46994}"
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=LAPTOP-HGONJJV6\SQLEXPRESS01;Initial Catalog=Churn_Staging;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-ETL_Project-{D328ACDA-C0D0-4727-808C-2819FB442D3B}LAPTOP-HGONJJV6\SQLEXPRESS01;Trust Server Certificate=True;" />
+      DTS:ConnectionString="Data Source=LAPTOP-5Q67MFKR\SQLEXPRESS01;Initial Catalog=Churn_Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-{0A666918-4BB5-453B-89A6-E1CF4DD46994}LAPTOP-5Q67MFKR_SQLEXPRESS01;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

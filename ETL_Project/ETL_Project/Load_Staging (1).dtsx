@@ -1,0 +1,2275 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/26/2026 5:25:34 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-HGONJJV6"
+  DTS:CreatorName="LAPTOP-HGONJJV6\asus"
+  DTS:DTSID="{F1B85555-2F64-481D-9C03-DA5637F0EC2F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{666D90A0-3142-413C-A5F4-3B7B392257F2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6B78564E-97E9-4AF5-8C3F-67D1293F9F82}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\HP\OneDrive - The British University in Egypt\Desktop\Data mining project\Data-Warehousing-Churn-Project\Data\customer_churn_dataset-training-master.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{FB9D4B24-80C4-4643-B013-C247163D7C86}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{29CD671D-113A-4A0A-98E5-95DD6774EA5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{D53F04E4-93B0-463F-AE61-817C2186AEB0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tenure"
+              DTS:DTSID="{224A8CE5-58FE-4875-81CB-0D56ED82062E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Usage Frequency"
+              DTS:DTSID="{2228CF7D-631A-48AE-9EB0-4EA06434E660}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Support Calls"
+              DTS:DTSID="{2827090F-00A4-4CCB-B4CD-E235DAA2EAB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payment Delay"
+              DTS:DTSID="{13F66894-F74E-4A48-A323-4E0096DFC163}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Subscription Type"
+              DTS:DTSID="{0C128FFE-3E69-41E0-9539-454C5939E1C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Length"
+              DTS:DTSID="{136B74EE-43BE-4FFB-AA5E-B408D11C3464}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Spend"
+              DTS:DTSID="{B7DBB2F3-062E-4FE6-B8D0-84BCEE1A2372}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Interaction"
+              DTS:DTSID="{0241F9DD-A2ED-492A-B1BB-1BB9A2FFEE41}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Churn "
+              DTS:DTSID="{6FC9875F-6B55-48B9-8A63-01487FB87AC4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{366272D7-EF2D-43A4-A6F4-93D71799236A}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\HP\OneDrive - The British University in Egypt\Desktop\Data mining project\Data-Warehousing-Churn-Project\Data\customer_churn_dataset-testing-master.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{F08366F9-F7BA-4FD6-86B0-DEF324361D8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{A8F44D6A-A713-43D8-8472-BE1A93AB2A06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{A44717A9-1AA0-4CAB-877C-0C8E1F41AA01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tenure"
+              DTS:DTSID="{0250F3C7-DA49-4925-B2A0-B55F00AE2E35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Usage Frequency"
+              DTS:DTSID="{3E3C0FDA-B13B-4E7E-A7C7-747AAA66EEC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Support Calls"
+              DTS:DTSID="{46387EE4-F561-4DB2-9553-3C3050DA7078}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payment Delay"
+              DTS:DTSID="{19307897-5545-4C7E-8C9E-B1CB3F73D43F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Subscription Type"
+              DTS:DTSID="{B6445FC5-D1DE-4DB4-8658-416838738E61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Length"
+              DTS:DTSID="{0736A028-91B8-4FFE-81D5-6C02B7870AC0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Spend"
+              DTS:DTSID="{95610938-862E-4B11-98FD-7BCAF6575F3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Interaction"
+              DTS:DTSID="{138ACF54-D48F-4156-9B78-507AC99DA36B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Churn "
+              DTS:DTSID="{8E91EF70-B934-400B-A5F0-AC0CD8227B36}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract Dataset1 Member1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E4F3E0EC-6323-467E-9CC5-89D7B8812B24}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Dataset1 Member1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Dataset1 Member1\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extract Dataset1 Member1\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Extract Dataset1 Member1\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Output].Columns[Source_File]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Output].Columns[Source_File]"
+                      name="Source_File"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,100,1252)"customer_churn_dataset-training-master.csv"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,100,1252)"customer_churn_dataset-training-master.csv"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Extract Dataset1 Member1\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Dataset1 Member1\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extract Dataset1 Member1\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Extract Dataset1 Member1\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Output].Columns[Source_File]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Output].Columns[Source_File]"
+                      name="Source_File"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,100,1252)"customer_churn_dataset-testing-master.csv"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,100,1252)"customer_churn_dataset-testing-master.csv"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Extract Dataset1 Member1\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Dataset1 Member1\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_Churn_Master]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Dataset1 Member1\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{0A666918-4BB5-453B-89A6-E1CF4DD46994}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-5Q67MFKR_SQLEXPRESS01]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustomerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Tenure]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Tenure"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tenure]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Tenure]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Usage Frequency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Usage Frequency"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Usage Frequency]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Support Calls]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Support Calls"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Support Calls]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Support Calls]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Payment Delay]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment Delay"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Delay]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Payment Delay]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Subscription Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Subscription Type"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subscription Type]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Subscription Type]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Contract Length]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract Length"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract Length]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Contract Length]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Total Spend]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total Spend"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total Spend]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Total Spend]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Interaction]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Interaction"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Interaction]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Last Interaction]" />
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Source_File]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Source_File"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Source_File]"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Source_File]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tenure" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Usage Frequency" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Support Calls" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Payment Delay" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Subscription Type" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract Length" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Total Spend" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Interaction" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Source_File]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Source_File" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Dataset1 Member1\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Dataset1 Member1\Testing Masster"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Testing Masster"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Dataset1 Member1\Testing Masster.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Tenure]"
+                      name="Tenure"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Usage Frequency]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Usage Frequency]"
+                      name="Usage Frequency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Support Calls]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Support Calls]"
+                      name="Support Calls"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Payment Delay]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Payment Delay]"
+                      name="Payment Delay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Subscription Type]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Subscription Type]"
+                      name="Subscription Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Contract Length]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Contract Length]"
+                      name="Contract Length"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Total Spend]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Total Spend]"
+                      name="Total Spend"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Last Interaction]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Last Interaction]"
+                      name="Last Interaction"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Churn ]"
+                      name="Churn "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tenure" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Usage Frequency" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Support Calls" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Payment Delay" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Subscription Type" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract Length" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Total Spend" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Interaction" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn " />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Dataset1 Member1\Traninger Master"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Traninger Master"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Dataset1 Member1\Traninger Master.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Tenure]"
+                      name="Tenure"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Usage Frequency]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Usage Frequency]"
+                      name="Usage Frequency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Support Calls]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Support Calls]"
+                      name="Support Calls"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Payment Delay]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Payment Delay]"
+                      name="Payment Delay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Subscription Type]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Subscription Type]"
+                      name="Subscription Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Contract Length]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Contract Length]"
+                      name="Contract Length"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Total Spend]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Total Spend]"
+                      name="Total Spend"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Last Interaction]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Last Interaction]"
+                      name="Last Interaction"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Churn ]"
+                      name="Churn "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tenure" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Usage Frequency" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Support Calls" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Payment Delay" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Subscription Type" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract Length" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Total Spend" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Interaction" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn " />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Dataset1 Member1\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[CustomerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerID"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[CustomerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Age]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Age]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Gender]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Gender]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Tenure]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Tenure"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Tenure]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Tenure]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Usage Frequency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Usage Frequency"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Usage Frequency]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Support Calls]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Support Calls"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Support Calls]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Support Calls]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Payment Delay]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment Delay"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Payment Delay]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Payment Delay]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Subscription Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Subscription Type"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Subscription Type]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Subscription Type]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Contract Length]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract Length"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Contract Length]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Contract Length]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Total Spend]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total Spend"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Total Spend]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Total Spend]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Last Interaction]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Interaction"
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Last Interaction]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Last Interaction]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Churn ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Churn "
+                      lineageId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output].Columns[Churn ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Churn ]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1].Columns[Source_File]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Source_File"
+                      lineageId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Output].Columns[Source_File]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Source_File]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[CustomerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerID"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[CustomerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Age]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Age]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Gender]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Gender]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Tenure]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Tenure"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Tenure]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Tenure]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Usage Frequency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Usage Frequency"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Usage Frequency]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Support Calls]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Support Calls"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Support Calls]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Support Calls]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Payment Delay]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment Delay"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Payment Delay]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Payment Delay]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Subscription Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Subscription Type"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Subscription Type]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Subscription Type]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Contract Length]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract Length"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Contract Length]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Contract Length]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Total Spend]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total Spend"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Total Spend]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Total Spend]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Last Interaction]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Interaction"
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Last Interaction]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Last Interaction]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Churn ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Churn "
+                      lineageId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output].Columns[Churn ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Churn ]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2].Columns[Source_File]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Source_File"
+                      lineageId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Output].Columns[Source_File]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Source_File]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Age]"
+                      name="Age" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Gender]"
+                      name="Gender" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Tenure]"
+                      name="Tenure" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]"
+                      name="Usage Frequency" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Support Calls]"
+                      name="Support Calls" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Payment Delay]"
+                      name="Payment Delay" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Subscription Type]"
+                      name="Subscription Type" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Contract Length]"
+                      name="Contract Length" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Total Spend]"
+                      name="Total Spend" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Last Interaction]"
+                      name="Last Interaction" />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Churn ]"
+                      name="Churn " />
+                    <outputColumn
+                      refId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Source_File]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1].Columns[Source_File]"
+                      name="Source_File" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Dataset1 Member1.Paths[Derived Column Output]"
+              endId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Extract Dataset1 Member1\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Extract Dataset1 Member1.Paths[Derived Column Output1]"
+              endId="Package\Extract Dataset1 Member1\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Extract Dataset1 Member1\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Extract Dataset1 Member1.Paths[Flat File Source Output]"
+              endId="Package\Extract Dataset1 Member1\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Dataset1 Member1\Traninger Master.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Extract Dataset1 Member1.Paths[Flat File Source Output1]"
+              endId="Package\Extract Dataset1 Member1\Derived Column 1.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Dataset1 Member1\Testing Masster.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Extract Dataset1 Member1.Paths[Union All Output 1]"
+              endId="Package\Extract Dataset1 Member1\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Extract Dataset1 Member1\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="201.6,41.6"
+          Id="Package\Extract Dataset1 Member1"
+          TopLeft="159.999991257986,103.133332616157" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract Dataset1 Member1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\Extract Dataset1 Member1\Traninger Master"
+          TopLeft="222.499987843137,15.5999998915195" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract Dataset1 Member1\Testing Masster"
+          TopLeft="466.666641169125,13.8666665702394" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Extract Dataset1 Member1\Derived Column"
+          TopLeft="224.999987706543,93.5999993491171" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Extract Dataset1 Member1\Derived Column 1"
+          TopLeft="464.166641305719,92.7333326884773" />
+        <EdgeLayout
+          Id="Package\Extract Dataset1 Member1.Paths[Flat File Source Output]"
+          TopLeft="301.34998777484,57.1999998915195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.3999994575977"
+              Start="0,0"
+              End="0,28.8999994575977">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.8999994575977" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Dataset1 Member1.Paths[Flat File Source Output1]"
+          TopLeft="543.816641237422,55.4666665702394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.2666661182378"
+              Start="0,0"
+              End="0,29.7666661182378">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.7666661182378" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Extract Dataset1 Member1\Union All"
+          TopLeft="360.83331361827,183.733332055675" />
+        <EdgeLayout
+          Id="Package\Extract Dataset1 Member1.Paths[Derived Column Output]"
+          TopLeft="301.399987706543,135.199999349117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.433325911727,48.5333327065576"
+              Start="0,0"
+              End="119.433325911727,41.0333327065576">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2666663532788" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2666663532788"
+                    Point2="0,24.2666663532788"
+                    Point3="4,24.2666663532788" />
+                  <mssgle:LineSegment
+                    End="115.433325911727,24.2666663532788" />
+                  <mssgle:CubicBezierSegment
+                    Point1="115.433325911727,24.2666663532788"
+                    Point2="119.433325911727,24.2666663532788"
+                    Point3="119.433325911727,28.2666663532788" />
+                  <mssgle:LineSegment
+                    End="119.433325911727,41.0333327065576" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Dataset1 Member1.Paths[Derived Column Output1]"
+          TopLeft="544.966641305719,134.333332688477">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-105.466661020783,49.3999993671974"
+              Start="0,0"
+              End="-105.466661020783,41.8999993671974">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.2499996253142" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.2499996253142"
+                    Point2="0,29.2499996253142"
+                    Point3="-4,29.2499996253142" />
+                  <mssgle:LineSegment
+                    End="-101.466661020783,29.2499996253142" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-101.466661020783,29.2499996253142"
+                    Point2="-105.466661020783,29.2499996253142"
+                    Point3="-105.466661020783,33.2499996253142" />
+                  <mssgle:LineSegment
+                    End="-105.466661020783,41.8999993671974" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Extract Dataset1 Member1\OLE DB Destination"
+          TopLeft="332.499981833002,274.733331422872" />
+        <EdgeLayout
+          Id="Package\Extract Dataset1 Member1.Paths[Union All Output 1]"
+          TopLeft="419.466647725636,225.333332055675">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.3999993671974"
+              Start="0,0"
+              End="0,41.8999993671974">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.8999993671974" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Dataset1 Member1\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
