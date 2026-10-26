@@ -1,0 +1,28 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# SSIS
+*.dtsx.bak
+*.database
+*.ispac
+*.dtproj.user
+
+# Local-only files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Other
+.vscode/
+*.rsuser
