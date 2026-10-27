@@ -9,6 +9,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=LAPTOP-HGONJJV6\CHURN_PROCESSED;Initial Catalog=Churn_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-ETL_Project;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=LAPTOP-5Q67MFKR\CHUM;Initial Catalog=Churn_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-ETL_Project;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

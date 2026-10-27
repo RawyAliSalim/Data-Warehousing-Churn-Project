@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{7AEC545F-26F1-4D5D-929A-DBDD71230E58}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{73E6DE73-84E2-477D-AC6B-F97BA8A26D6C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -33,7 +33,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\asus\Documents\BUE Projects\Data mining and Wearhouse\Project\Data-Warehousing-Churn-Project\Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
+          DTS:ConnectionString="C:\Users\HP\OneDrive - The British University in Egypt\Desktop\Data mining project\Data-Warehousing-Churn-Project\Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -232,13 +232,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\ETL Dim_Billing"
+      DTS:refId="Package\ETL Dim_Senior_Customer"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{A17630FD-F443-47AA-AEFC-A1FB8714F39A}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="ETL Dim_Billing"
+      DTS:ObjectName="ETL Dim_Senior_Customer"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -246,7 +246,7 @@
           version="1">
           <components>
             <component
-              refId="Package\ETL Dim_Billing\Conditional Split"
+              refId="Package\ETL Dim_Senior_Customer\Conditional Split"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
@@ -254,37 +254,37 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\ETL Dim_Billing\Conditional Split.Inputs[Conditional Split Input]"
+                  refId="Package\ETL Dim_Senior_Customer\Conditional Split.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\Conditional Split.Inputs[Conditional Split Input].Columns[SeniorCitizen]"
+                      refId="Package\ETL Dim_Senior_Customer\Conditional Split.Inputs[Conditional Split Input].Columns[SeniorCitizen]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="SeniorCitizen"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]" />
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\ETL Dim_Billing\Conditional Split.Outputs[Valid]"
+                  refId="Package\ETL Dim_Senior_Customer\Conditional Split.Outputs[Valid]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Valid"
-                  synchronousInputId="Package\ETL Dim_Billing\Conditional Split.Inputs[Conditional Split Input]"
+                  synchronousInputId="Package\ETL Dim_Senior_Customer\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]} == "1"</property>
+                      name="Expression">#{Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]} == "1"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -299,11 +299,11 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\ETL Dim_Billing\Conditional Split.Outputs[Conditional Split Default Output]"
+                  refId="Package\ETL Dim_Senior_Customer\Conditional Split.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   name="Conditional Split Default Output"
-                  synchronousInputId="Package\ETL Dim_Billing\Conditional Split.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\ETL Dim_Senior_Customer\Conditional Split.Inputs[Conditional Split Input]">
                   <properties>
                     <property
                       dataType="System.Boolean"
@@ -312,23 +312,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\ETL Dim_Billing\Conditional Split.Outputs[Conditional Split Error Output]"
+                  refId="Package\ETL Dim_Senior_Customer\Conditional Split.Outputs[Conditional Split Error Output]"
                   description="Error Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Conditional Split Error Output"
-                  synchronousInputId="Package\ETL Dim_Billing\Conditional Split.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\ETL Dim_Senior_Customer\Conditional Split.Inputs[Conditional Split Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Dim_Senior_Customer\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\ETL Dim_Billing\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Dim_Senior_Customer\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\ETL Dim_Billing\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -337,7 +337,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\ETL Dim_Billing\Derived Column"
+              refId="Package\ETL Dim_Senior_Customer\Derived Column"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
@@ -345,36 +345,36 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\ETL Dim_Senior_Customer\Derived Column.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input].Columns[customerID]"
+                      refId="Package\ETL Dim_Senior_Customer\Derived Column.Inputs[Derived Column Input].Columns[customerID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="customerID"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]" />
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output]"
+                  refId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\ETL Dim_Senior_Customer\Derived Column.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Customer_Number]"
+                      refId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Output].Columns[Customer_Number]"
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Customer_Number]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Output].Columns[Customer_Number]"
                       name="Customer_Number"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -382,7 +382,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TOKEN](#{Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]},"-",1)</property>
+                          name="Expression">[TOKEN](#{Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]},"-",1)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -392,12 +392,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Customer_Code]"
+                      refId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Output].Columns[Customer_Code]"
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Customer_Code]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Output].Columns[Customer_Code]"
                       name="Customer_Code"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -405,7 +405,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TOKEN](#{Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]},"-",2)</property>
+                          name="Expression">[TOKEN](#{Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]},"-",2)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -418,23 +418,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output]"
+                  refId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\ETL Dim_Senior_Customer\Derived Column.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -443,7 +443,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\ETL Dim_Billing\Flat File Source"
+              refId="Package\ETL Dim_Senior_Customer\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
@@ -463,25 +463,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\ETL Dim_Billing\Flat File Source.Connections[FlatFileConnection]"
+                  refId="Package\ETL Dim_Senior_Customer\Flat File Source.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customerID]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customerID]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]"
                       name="customerID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -496,14 +496,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[gender]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[gender]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gender]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[gender]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[gender]"
                       name="gender"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -518,14 +518,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SeniorCitizen]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SeniorCitizen]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]"
                       name="SeniorCitizen"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -540,14 +540,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Partner]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Partner]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Partner]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Partner]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Partner]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Partner]"
                       name="Partner"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -562,14 +562,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Dependents]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Dependents]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dependents]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dependents]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Dependents]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Dependents]"
                       name="Dependents"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -584,14 +584,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[tenure]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[tenure]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tenure]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tenure]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[tenure]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[tenure]"
                       name="tenure"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -606,14 +606,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[PhoneService]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[PhoneService]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PhoneService]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PhoneService]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[PhoneService]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[PhoneService]"
                       name="PhoneService"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -628,14 +628,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[MultipleLines]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[MultipleLines]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MultipleLines]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MultipleLines]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[MultipleLines]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[MultipleLines]"
                       name="MultipleLines"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -650,14 +650,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[InternetService]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[InternetService]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InternetService]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InternetService]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[InternetService]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[InternetService]"
                       name="InternetService"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -672,14 +672,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineSecurity]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineSecurity]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineSecurity]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineSecurity]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineSecurity]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineSecurity]"
                       name="OnlineSecurity"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -694,14 +694,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineBackup]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineBackup]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineBackup]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineBackup]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineBackup]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineBackup]"
                       name="OnlineBackup"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -716,14 +716,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[DeviceProtection]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[DeviceProtection]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DeviceProtection]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DeviceProtection]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[DeviceProtection]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[DeviceProtection]"
                       name="DeviceProtection"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -738,14 +738,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[TechSupport]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[TechSupport]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TechSupport]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TechSupport]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[TechSupport]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[TechSupport]"
                       name="TechSupport"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -760,14 +760,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingTV]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingTV]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]"
                       name="StreamingTV"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -782,14 +782,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingMovies]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingMovies]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]"
                       name="StreamingMovies"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -804,14 +804,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Contract]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Contract]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]"
                       name="Contract"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -826,14 +826,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[PaperlessBilling]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[PaperlessBilling]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaperlessBilling]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaperlessBilling]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[PaperlessBilling]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[PaperlessBilling]"
                       name="PaperlessBilling"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -848,14 +848,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[PaymentMethod]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[PaymentMethod]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaymentMethod]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaymentMethod]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[PaymentMethod]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[PaymentMethod]"
                       name="PaymentMethod"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -870,14 +870,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[MonthlyCharges]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[MonthlyCharges]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MonthlyCharges]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MonthlyCharges]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[MonthlyCharges]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[MonthlyCharges]"
                       name="MonthlyCharges"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -892,14 +892,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCharges]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCharges]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalCharges]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalCharges]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCharges]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCharges]"
                       name="TotalCharges"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -914,14 +914,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Churn ]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Churn ]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
                       length="50"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Churn ]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Churn ]"
                       name="Churn "
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -939,127 +939,127 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customerID]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customerID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="customerID" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gender]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="gender" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SeniorCitizen]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SeniorCitizen]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="SeniorCitizen" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Partner]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Partner]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Partner" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dependents]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dependents]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Dependents" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tenure]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tenure]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="tenure" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PhoneService]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PhoneService]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="PhoneService" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MultipleLines]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MultipleLines]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="MultipleLines" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InternetService]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InternetService]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="InternetService" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineSecurity]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineSecurity]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="OnlineSecurity" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineBackup]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineBackup]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="OnlineBackup" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DeviceProtection]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DeviceProtection]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="DeviceProtection" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TechSupport]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TechSupport]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="TechSupport" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingTV]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingTV]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="StreamingTV" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingMovies]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingMovies]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="StreamingMovies" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Contract]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Contract]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Contract" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaperlessBilling]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaperlessBilling]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="PaperlessBilling" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaymentMethod]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaymentMethod]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="PaymentMethod" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MonthlyCharges]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MonthlyCharges]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="MonthlyCharges" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalCharges]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalCharges]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="TotalCharges" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -1067,27 +1067,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1096,7 +1096,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\ETL Dim_Billing\OLE DB Destination"
+              refId="Package\ETL Dim_Senior_Customer\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -1153,7 +1153,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\ETL Dim_Billing\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="{54EEDF43-68AD-47C2-B73D-EE7D938C23B5}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DWH_DB]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1161,330 +1161,330 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customerID]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customerID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="customerID"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[gender]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="gender"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[gender]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[gender]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SeniorCitizen]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SeniorCitizen]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="SeniorCitizen"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeniorCitizen]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeniorCitizen]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Partner]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Partner]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Partner"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Partner]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Partner]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Partner]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Partner]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Dependents]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Dependents]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Dependents"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dependents]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Dependents]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dependents]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Dependents]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tenure]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tenure]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="tenure"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tenure]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[tenure]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tenure]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[tenure]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PhoneService]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PhoneService]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="PhoneService"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhoneService]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[PhoneService]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhoneService]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[PhoneService]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MultipleLines]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MultipleLines]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="MultipleLines"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MultipleLines]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[MultipleLines]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MultipleLines]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[MultipleLines]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InternetService]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InternetService]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="InternetService"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InternetService]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[InternetService]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InternetService]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[InternetService]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OnlineSecurity]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OnlineSecurity]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="OnlineSecurity"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineSecurity]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineSecurity]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineSecurity]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineSecurity]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OnlineBackup]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OnlineBackup]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="OnlineBackup"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineBackup]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineBackup]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineBackup]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineBackup]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DeviceProtection]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DeviceProtection]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="DeviceProtection"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeviceProtection]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[DeviceProtection]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeviceProtection]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[DeviceProtection]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TechSupport]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TechSupport]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TechSupport"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechSupport]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[TechSupport]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechSupport]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[TechSupport]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreamingTV]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreamingTV]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="StreamingTV"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingTV]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingTV]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreamingMovies]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreamingMovies]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="StreamingMovies"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingMovies]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingMovies]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Contract]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Contract]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Contract"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaperlessBilling]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaperlessBilling]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="PaperlessBilling"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaperlessBilling]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[PaperlessBilling]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaperlessBilling]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[PaperlessBilling]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaymentMethod]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaymentMethod]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="PaymentMethod"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentMethod]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[PaymentMethod]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentMethod]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[PaymentMethod]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MonthlyCharges]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MonthlyCharges]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="MonthlyCharges"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthlyCharges]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[MonthlyCharges]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthlyCharges]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[MonthlyCharges]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TotalCharges]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TotalCharges]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TotalCharges"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCharges]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCharges]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCharges]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCharges]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Churn ]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Churn ]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Churn "
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn ]"
-                      lineageId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output].Columns[Churn ]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn ]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output].Columns[Churn ]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer_Number]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer_Number]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Customer_Number"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Number]"
-                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Customer_Number]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Number]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Output].Columns[Customer_Number]" />
                     <inputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer_Code]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer_Code]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Customer_Code"
-                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Code]"
-                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Customer_Code]" />
+                      externalMetadataColumnId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Code]"
+                      lineageId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Output].Columns[Customer_Code]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="customerID" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="gender" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeniorCitizen]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeniorCitizen]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="SeniorCitizen" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Partner]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Partner]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Partner" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dependents]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dependents]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Dependents" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tenure]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tenure]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="tenure" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhoneService]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhoneService]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="PhoneService" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MultipleLines]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MultipleLines]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="MultipleLines" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InternetService]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InternetService]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="InternetService" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineSecurity]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineSecurity]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="OnlineSecurity" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineBackup]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineBackup]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="OnlineBackup" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeviceProtection]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeviceProtection]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="DeviceProtection" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechSupport]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechSupport]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="TechSupport" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingTV]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingTV]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="StreamingTV" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingMovies]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingMovies]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="StreamingMovies" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Contract" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaperlessBilling]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaperlessBilling]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="PaperlessBilling" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentMethod]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentMethod]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="PaymentMethod" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthlyCharges]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthlyCharges]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="MonthlyCharges" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCharges]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCharges]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="TotalCharges" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn ]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn ]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Churn " />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Number]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Number]"
                       dataType="wstr"
                       length="50"
                       name="Customer_Number" />
                     <externalMetadataColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Code]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Code]"
                       dataType="wstr"
                       length="50"
                       name="Customer_Code" />
@@ -1493,22 +1493,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1519,20 +1519,20 @@
           </components>
           <paths>
             <path
-              refId="Package\ETL Dim_Billing.Paths[Derived Column Output]"
-              endId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\ETL Dim_Senior_Customer.Paths[Derived Column Output]"
+              endId="Package\ETL Dim_Senior_Customer\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\ETL Dim_Senior_Customer\Derived Column.Outputs[Derived Column Output]" />
             <path
-              refId="Package\ETL Dim_Billing.Paths[Flat File Source Output]"
-              endId="Package\ETL Dim_Billing\Conditional Split.Inputs[Conditional Split Input]"
+              refId="Package\ETL Dim_Senior_Customer.Paths[Flat File Source Output]"
+              endId="Package\ETL Dim_Senior_Customer\Conditional Split.Inputs[Conditional Split Input]"
               name="Flat File Source Output"
-              startId="Package\ETL Dim_Billing\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\ETL Dim_Senior_Customer\Flat File Source.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\ETL Dim_Billing.Paths[Valid]"
-              endId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input]"
+              refId="Package\ETL Dim_Senior_Customer.Paths[Valid]"
+              endId="Package\ETL Dim_Senior_Customer\Derived Column.Inputs[Derived Column Input]"
               name="Valid"
-              startId="Package\ETL Dim_Billing\Conditional Split.Outputs[Valid]" />
+              startId="Package\ETL Dim_Senior_Customer\Conditional Split.Outputs[Valid]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1551,53 +1551,35 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\ETL Dim_Billing"
+          Size="205.6,41.6"
+          Id="Package\ETL Dim_Senior_Customer"
           TopLeft="354.166647315854,77.1333327969578" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\ETL Dim_Billing">
+    design-time-name="Package\ETL Dim_Senior_Customer">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="151.2,41.6"
-          Id="Package\ETL Dim_Billing\Flat File Source"
+          Id="Package\ETL Dim_Senior_Customer\Flat File Source"
           TopLeft="349.166647589042,57.1999996022383" />
         <NodeLayout
           Size="153.6,41.6"
-          Id="Package\ETL Dim_Billing\Conditional Split"
+          Id="Package\ETL Dim_Senior_Customer\Conditional Split"
           TopLeft="347.499981013438,142.133332344956" />
-        <EdgeLayout
-          Id="Package\ETL Dim_Billing.Paths[Flat File Source Output]"
-          TopLeft="424.53331430124,98.7999996022383">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43.3333327427175"
-              Start="0,0"
-              End="0,35.8333327427175">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.8333327427175" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\ETL Dim_Senior_Customer\OLE DB Destination"
+          TopLeft="340.833314711022,318.933331115511" />
         <NodeLayout
           Size="152.8,41.6"
-          Id="Package\ETL Dim_Billing\Derived Column"
+          Id="Package\ETL Dim_Senior_Customer\Derived Column"
           TopLeft="349.166647589042,227.066665087673" />
         <EdgeLayout
-          Id="Package\ETL Dim_Billing.Paths[Valid]"
+          Id="Package\ETL Dim_Senior_Customer.Paths[Valid]"
           TopLeft="424.93331430124,183.733332344956">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1620,12 +1602,30 @@
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\ETL Dim_Billing\OLE DB Destination"
-          TopLeft="340.833314711022,318.933331115511" />
         <EdgeLayout
-          Id="Package\ETL Dim_Billing.Paths[Derived Column Output]"
+          Id="Package\ETL Dim_Senior_Customer.Paths[Flat File Source Output]"
+          TopLeft="424.53331430124,98.7999996022383">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.3333327427175"
+              Start="0,0"
+              End="0,35.8333327427175">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.8333327427175" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Dim_Senior_Customer.Paths[Derived Column Output]"
           TopLeft="425.999981150032,268.666665087673">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1650,7 +1650,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Dim_Billing\OLE DB Destination">
+    design-time-name="Package\ETL Dim_Senior_Customer\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
