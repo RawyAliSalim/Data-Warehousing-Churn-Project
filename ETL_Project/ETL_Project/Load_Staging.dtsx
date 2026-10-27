@@ -12,8 +12,8 @@
   DTS:ObjectName="Load_Staging"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{A2EC9CA9-B68E-4FE5-AE19-893B4D28B382}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{97A2E7C7-C8A1-458B-8A93-0EAA26440B50}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -22,6 +22,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{6B78564E-97E9-4AF5-8C3F-67D1293F9F82}"
       DTS:ObjectName="Flat File Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\\customer_churn_dataset-training-master.csv"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -31,7 +33,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\HP\OneDrive - The British University in Egypt\Desktop\Data mining project\Data-Warehousing-Churn-Project\Data\customer_churn_dataset-training-master.csv">
+          DTS:ConnectionString="C:\Users\asus\Documents\BUE Projects\Data mining and Wearhouse\Project\Data-Warehousing-Churn-Project\Data\customer_churn_dataset-training-master.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,6 +152,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{366272D7-EF2D-43A4-A6F4-93D71799236A}"
       DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\\customer_churn_dataset-testing-master.csv"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -159,7 +163,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\HP\OneDrive - The British University in Egypt\Desktop\Data mining project\Data-Warehousing-Churn-Project\Data\customer_churn_dataset-testing-master.csv">
+          DTS:ConnectionString="C:\Users\asus\Documents\BUE Projects\Data mining and Wearhouse\Project\Data-Warehousing-Churn-Project\Data\customer_churn_dataset-testing-master.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -278,6 +282,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{15859E98-451D-4ED8-99A2-79603C87898B}"
       DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\\WA_Fn-UseC_-Telco-Customer-Churn.csv"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -287,7 +293,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\HP\OneDrive - The British University in Egypt\Desktop\Data mining project\Data-Warehousing-Churn-Project\Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
+          DTS:ConnectionString="C:\Users\asus\Documents\BUE Projects\Data mining and Wearhouse\Project\Data-Warehousing-Churn-Project\Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2282,11 +2288,12 @@ FROM dbo.stg_Churn_Telco;</property>
               version="1">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
-                  name="Union All Input 1">
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Source_Dataset]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Source_Dataset]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2301,7 +2308,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Source_File]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Source_File]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
@@ -2316,7 +2323,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Customer_ID]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Customer_ID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="20"
@@ -2331,7 +2338,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Gender]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="20"
@@ -2346,7 +2353,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Age]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Age]"
                       cachedDataType="i4"
                       cachedName="Age"
                       lineageId="Package\Data Flow Task\Dataset 1 mapped.Outputs[OLE DB Source Output].Columns[Age]">
@@ -2359,7 +2366,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Senior_Citizen]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Senior_Citizen]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
@@ -2374,7 +2381,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Partner]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Partner]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
@@ -2389,7 +2396,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Dependents]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Dependents]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
@@ -2404,7 +2411,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Subscription_Type]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Subscription_Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2419,7 +2426,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Internet_Service]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Internet_Service]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2434,7 +2441,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Phone_Service]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Phone_Service]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2449,7 +2456,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Online_Security]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Online_Security]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2464,7 +2471,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Tech_Support]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Tech_Support]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2479,7 +2486,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Streaming_TV]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Streaming_TV]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2494,7 +2501,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Contract_Type]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Contract_Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2509,7 +2516,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Paperless_Billing]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Paperless_Billing]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
@@ -2524,7 +2531,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Payment_Method]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Payment_Method]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2539,7 +2546,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Tenure_Months]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Tenure_Months]"
                       cachedDataType="i4"
                       cachedName="Tenure_Months"
                       lineageId="Package\Data Flow Task\Dataset 1 mapped.Outputs[OLE DB Source Output].Columns[Tenure_Months]">
@@ -2552,7 +2559,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Usage_Frequency]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Usage_Frequency]"
                       cachedDataType="i4"
                       cachedName="Usage_Frequency"
                       lineageId="Package\Data Flow Task\Dataset 1 mapped.Outputs[OLE DB Source Output].Columns[Usage_Frequency]">
@@ -2565,7 +2572,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Support_Calls]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Support_Calls]"
                       cachedDataType="i4"
                       cachedName="Support_Calls"
                       lineageId="Package\Data Flow Task\Dataset 1 mapped.Outputs[OLE DB Source Output].Columns[Support_Calls]">
@@ -2578,7 +2585,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Payment_Delay]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Payment_Delay]"
                       cachedDataType="i4"
                       cachedName="Payment_Delay"
                       lineageId="Package\Data Flow Task\Dataset 1 mapped.Outputs[OLE DB Source Output].Columns[Payment_Delay]">
@@ -2591,7 +2598,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Last_Interaction]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Last_Interaction]"
                       cachedDataType="i4"
                       cachedName="Last_Interaction"
                       lineageId="Package\Data Flow Task\Dataset 1 mapped.Outputs[OLE DB Source Output].Columns[Last_Interaction]">
@@ -2604,7 +2611,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Monthly_Charges]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Monthly_Charges]"
                       cachedDataType="numeric"
                       cachedName="Monthly_Charges"
                       cachedPrecision="10"
@@ -2619,7 +2626,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Total_Spend]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Total_Spend]"
                       cachedDataType="numeric"
                       cachedName="Total_Spend"
                       cachedPrecision="12"
@@ -2634,7 +2641,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Churn]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Churn]"
                       cachedDataType="i4"
                       cachedName="Churn"
                       lineageId="Package\Data Flow Task\Dataset 1 mapped.Outputs[OLE DB Source Output].Columns[Churn]">
@@ -2650,12 +2657,12 @@ FROM dbo.stg_Churn_Telco;</property>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
                   hasSideEffects="true"
-                  name="Union All Input 2">
+                  name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Source_Dataset]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Source_Dataset]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2670,7 +2677,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Source_File]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Source_File]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
@@ -2685,7 +2692,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Customer_ID]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Customer_ID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="20"
@@ -2700,7 +2707,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Gender]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="20"
@@ -2715,7 +2722,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Age]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Age]"
                       cachedDataType="i4"
                       cachedName="Age"
                       lineageId="Package\Data Flow Task\Dataset 2 mapped.Outputs[OLE DB Source Output].Columns[Age]">
@@ -2728,7 +2735,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Senior_Citizen]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Senior_Citizen]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
@@ -2743,7 +2750,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Partner]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Partner]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
@@ -2758,7 +2765,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Dependents]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Dependents]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
@@ -2773,7 +2780,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Subscription_Type]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Subscription_Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2788,7 +2795,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Internet_Service]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Internet_Service]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2803,7 +2810,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Phone_Service]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Phone_Service]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2818,7 +2825,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Online_Security]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Online_Security]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2833,7 +2840,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Tech_Support]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Tech_Support]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2848,7 +2855,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Streaming_TV]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Streaming_TV]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2863,7 +2870,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Contract_Type]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Contract_Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -2878,7 +2885,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Paperless_Billing]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Paperless_Billing]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
@@ -2893,7 +2900,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Payment_Method]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Payment_Method]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2908,7 +2915,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Tenure_Months]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Tenure_Months]"
                       cachedDataType="i4"
                       cachedName="Tenure_Months"
                       lineageId="Package\Data Flow Task\Dataset 2 mapped.Outputs[OLE DB Source Output].Columns[Tenure_Months]">
@@ -2921,7 +2928,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Usage_Frequency]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Usage_Frequency]"
                       cachedDataType="i4"
                       cachedName="Usage_Frequency"
                       lineageId="Package\Data Flow Task\Dataset 2 mapped.Outputs[OLE DB Source Output].Columns[Usage_Frequency]">
@@ -2934,7 +2941,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Support_Calls]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Support_Calls]"
                       cachedDataType="i4"
                       cachedName="Support_Calls"
                       lineageId="Package\Data Flow Task\Dataset 2 mapped.Outputs[OLE DB Source Output].Columns[Support_Calls]">
@@ -2947,7 +2954,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Payment_Delay]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Payment_Delay]"
                       cachedDataType="i4"
                       cachedName="Payment_Delay"
                       lineageId="Package\Data Flow Task\Dataset 2 mapped.Outputs[OLE DB Source Output].Columns[Payment_Delay]">
@@ -2960,7 +2967,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Last_Interaction]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Last_Interaction]"
                       cachedDataType="i4"
                       cachedName="Last_Interaction"
                       lineageId="Package\Data Flow Task\Dataset 2 mapped.Outputs[OLE DB Source Output].Columns[Last_Interaction]">
@@ -2973,7 +2980,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Monthly_Charges]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Monthly_Charges]"
                       cachedDataType="numeric"
                       cachedName="Monthly_Charges"
                       cachedPrecision="10"
@@ -2988,7 +2995,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Total_Spend]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Total_Spend]"
                       cachedDataType="numeric"
                       cachedName="Total_Spend"
                       cachedPrecision="12"
@@ -3003,7 +3010,7 @@ FROM dbo.stg_Churn_Telco;</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Churn]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Churn]"
                       cachedDataType="i4"
                       cachedName="Churn"
                       lineageId="Package\Data Flow Task\Dataset 2 mapped.Outputs[OLE DB Source Output].Columns[Churn]">
@@ -3019,10 +3026,10 @@ FROM dbo.stg_Churn_Telco;</property>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
                   dangling="true"
                   hasSideEffects="true"
-                  name="Union All Input 3">
+                  name="Union All Input 2">
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -3201,12 +3208,12 @@ FROM dbo.stg_Churn_Telco;</property>
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task\Dataset 1 mapped.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output1]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task\Dataset 2 mapped.Outputs[OLE DB Source Output]" />
             <path
@@ -6180,7 +6187,7 @@ FROM dbo.stg_Churn_Telco;</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{3FE4EF2D-A2FB-4E16-846C-98CBB351B512}"
+      DTS:DTSID="{55B77095-F97D-464D-96C0-FE35084E95A2}"
       DTS:From="Package\Extract Dataset1 Member1"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -6188,7 +6195,7 @@ FROM dbo.stg_Churn_Telco;</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{CB1A1C89-CD2C-41A6-B068-99B57CB42E75}"
+      DTS:DTSID="{82D49345-BB0B-49E3-B14A-CE62935139E8}"
       DTS:From="Package\Extract Database2 Member2"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -6207,7 +6214,7 @@ FROM dbo.stg_Churn_Telco;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,41.3333333333334"
+          Size="153.333333333334,42.6666666666667"
           Id="Package\Data Flow Task"
           TopLeft="351.666647452448,207.999998553594" />
         <NodeLayout
@@ -6220,30 +6227,30 @@ FROM dbo.stg_Churn_Telco;</property>
           TopLeft="159.999991257986,103.133332616157" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="260.799991257986,144.733332616157">
+          TopLeft="263.333324591319,145.799999282824">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="142.333322861129,63.266665937437"
+              EndConnector="164.999989527795,62.1999992707703"
               Start="0,0"
-              End="142.333322861129,55.766665937437">
+              End="164.999989527795,54.6999992707703">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.5604206196994" />
+                    End="0,27.0999996353852" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.5604206196994"
-                    Point2="0,37.5604206196994"
-                    Point3="4,37.5604206196994" />
+                    Point1="0,27.0999996353852"
+                    Point2="0,31.0999996353852"
+                    Point3="4,31.0999996353852" />
                   <mssgle:LineSegment
-                    End="138.333322861129,37.5604206196994" />
+                    End="160.999989527795,31.0999996353852" />
                   <mssgle:CubicBezierSegment
-                    Point1="138.333322861129,37.5604206196994"
-                    Point2="142.333322861129,37.5604206196994"
-                    Point3="142.333322861129,41.5604206196994" />
+                    Point1="160.999989527795,31.0999996353852"
+                    Point2="164.999989527795,31.0999996353852"
+                    Point3="164.999989527795,35.0999996353852" />
                   <mssgle:LineSegment
-                    End="142.333322861129,55.766665937437" />
+                    End="164.999989527795,54.6999992707703" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6254,30 +6261,30 @@ FROM dbo.stg_Churn_Telco;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="521.866643901005,142.133332634237">
+          TopLeft="521.999977234338,141.86666596757">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-71.2666631152234,65.8666659193569"
+              EndConnector="-69.4444408930015,66.1333325860237"
               Start="0,0"
-              End="-71.2666631152234,58.3666659193569">
+              End="-69.4444408930015,58.6333325860237">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.103999556334" />
+                    End="0,35.2702233083961" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,35.103999556334"
-                    Point2="0,39.103999556334"
-                    Point3="-4,39.103999556334" />
+                    Point1="0,35.2702233083961"
+                    Point2="0,39.2702233083961"
+                    Point3="-4,39.2702233083961" />
                   <mssgle:LineSegment
-                    End="-67.2666631152234,39.103999556334" />
+                    End="-65.4444408930015,39.2702233083961" />
                   <mssgle:CubicBezierSegment
-                    Point1="-67.2666631152234,39.103999556334"
-                    Point2="-71.2666631152234,39.103999556334"
-                    Point3="-71.2666631152234,43.103999556334" />
+                    Point1="-65.4444408930015,39.2702233083961"
+                    Point2="-69.4444408930015,39.2702233083961"
+                    Point3="-69.4444408930015,43.2702233083961" />
                   <mssgle:LineSegment
-                    End="-71.2666631152234,58.3666659193569" />
+                    End="-69.4444408930015,58.6333325860237" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6295,115 +6302,115 @@ FROM dbo.stg_Churn_Telco;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163.2,41.6"
+          Size="120,41.3333333333334"
+          Id="Package\Data Flow Task\Union All"
+          TopLeft="612.999990865588,197.99999704957" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
           Id="Package\Data Flow Task\Dataset 1 mapped"
           TopLeft="464.99999307096,87.9999986886978" />
         <NodeLayout
-          Size="120,41.6"
-          Id="Package\Data Flow Task\Union All"
-          TopLeft="612.999990865588,197.99999704957" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="546.59999307096,129.599998688698">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="107.733331127962,68.3999983608722"
-              Start="0,0"
-              End="107.733331127962,60.8999983608722">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.4999990294638" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.4999990294638"
-                    Point2="0,40.4999990294638"
-                    Point3="4,40.4999990294638" />
-                  <mssgle:LineSegment
-                    End="103.733331127962,40.4999990294638" />
-                  <mssgle:CubicBezierSegment
-                    Point1="103.733331127962,40.4999990294638"
-                    Point2="107.733331127962,40.4999990294638"
-                    Point3="107.733331127962,44.4999990294638" />
-                  <mssgle:LineSegment
-                    End="107.733331127962,60.8999983608722" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163.2,41.6"
+          Size="163.333333333334,41.3333333333334"
           Id="Package\Data Flow Task\Dataset 2 mapped"
           TopLeft="719.999989271164,86.999998703599" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
-          TopLeft="801.599989271164,128.599998703599">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-109.933331738909,69.3999983459711"
-              Start="0,0"
-              End="-109.933331738909,61.8999983459711">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.0921042837986" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.0921042837986"
-                    Point2="0,41.0921042837986"
-                    Point3="-4,41.0921042837986" />
-                  <mssgle:LineSegment
-                    End="-105.933331738909,41.0921042837986" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-105.933331738909,41.0921042837986"
-                    Point2="-109.933331738909,41.0921042837986"
-                    Point3="-109.933331738909,45.0921042837986" />
-                  <mssgle:LineSegment
-                    End="-109.933331738909,61.8999983459711" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="171.2,41.6"
+          Size="174.666666666667,42.6666666666667"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="597.999991089105,283.99999576807" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="672.999990865588,239.59999704957">
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="548.333326404293,130.666665355364">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.6000002235172,44.3999987185002"
+              EndConnector="105.999997794628,67.3333316942055"
               Start="0,0"
-              End="10.6000002235172,36.8999987185002">
+              End="105.999997794628,59.8333316942055">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.1999993592501" />
+                    End="0,35.8684200820954" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.1999993592501"
-                    Point2="0,22.1999993592501"
-                    Point3="4,22.1999993592501" />
+                    Point1="0,35.8684200820954"
+                    Point2="0,39.8684200820954"
+                    Point3="4,39.8684200820954" />
                   <mssgle:LineSegment
-                    End="6.60000022351721,22.1999993592501" />
+                    End="101.999997794628,39.8684200820954" />
                   <mssgle:CubicBezierSegment
-                    Point1="6.60000022351721,22.1999993592501"
-                    Point2="10.6000002235172,22.1999993592501"
-                    Point3="10.6000002235172,26.1999993592501" />
+                    Point1="101.999997794628,39.8684200820954"
+                    Point2="105.999997794628,39.8684200820954"
+                    Point3="105.999997794628,43.8684200820954" />
                   <mssgle:LineSegment
-                    End="10.6000002235172,36.8999987185002" />
+                    End="105.999997794628,59.8333316942055" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="801.666655937831,128.333332036932">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-109.999998405576,69.6666650126377"
+              Start="0,0"
+              End="-109.999998405576,62.1666650126377">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.2499990206407" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.2499990206407"
+                    Point2="0,41.2499990206407"
+                    Point3="-4,41.2499990206407" />
+                  <mssgle:LineSegment
+                    End="-105.999998405576,41.2499990206407" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-105.999998405576,41.2499990206407"
+                    Point2="-109.999998405576,41.2499990206407"
+                    Point3="-109.999998405576,45.2499990206407" />
+                  <mssgle:LineSegment
+                    End="-109.999998405576,62.1666650126377" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="672.999990865588,239.333330382903">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.3333335568504,44.6666653851667"
+              Start="0,0"
+              End="12.3333335568504,37.1666653851667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.3333326925833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.3333326925833"
+                    Point2="0,22.3333326925833"
+                    Point3="4,22.3333326925833" />
+                  <mssgle:LineSegment
+                    End="8.33333355685045,22.3333326925833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.33333355685045,22.3333326925833"
+                    Point2="12.3333335568504,22.3333326925833"
+                    Point3="12.3333335568504,26.3333326925833" />
+                  <mssgle:LineSegment
+                    End="12.3333335568504,37.1666653851667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6448,7 +6455,11 @@ FROM dbo.stg_Churn_Telco;</property>
     design-time-name="Package\Extract Database2 Member2">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Extract Database2 Member2\OLE DB Destination"
+          TopLeft="430.9999935776,243.999996364117" />
         <NodeLayout
           Size="151.2,41.6"
           Id="Package\Extract Database2 Member2\Flat File Source"
@@ -6476,13 +6487,11 @@ FROM dbo.stg_Churn_Telco;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Extract Database2 Member2\OLE DB Destination"
-          TopLeft="430.9999935776,243.999996364117" />
         <EdgeLayout
           Id="Package\Extract Database2 Member2.Paths[Derived Column Output]"
           TopLeft="515.499993525446,182.599997898936">
@@ -6502,7 +6511,9 @@ FROM dbo.stg_Churn_Telco;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6525,7 +6536,7 @@ FROM dbo.stg_Churn_Telco;</property>
     design-time-name="Package\Extract Dataset1 Member1">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,41.3333333333334"
           Id="Package\Extract Dataset1 Member1\Testing Masster"
@@ -6569,7 +6580,9 @@ FROM dbo.stg_Churn_Telco;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6591,7 +6604,9 @@ FROM dbo.stg_Churn_Telco;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6613,7 +6628,9 @@ FROM dbo.stg_Churn_Telco;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6647,7 +6664,9 @@ FROM dbo.stg_Churn_Telco;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6681,7 +6700,9 @@ FROM dbo.stg_Churn_Telco;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

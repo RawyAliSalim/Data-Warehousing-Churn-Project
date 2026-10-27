@@ -1,8 +1,10 @@
 /* =====================================================================
    Customer Churn ETL - database setup  (Dataset 1 + Telco)
-   PART A  -> run on  LAPTOP-5Q67MFKR\SQLEXPRESS01   (Churn_Staging)
-   PART B  -> run on  LAPTOP-5Q67MFKR\CHUM           (Churn_DWH)
+   PART A  -> run on your Churn_Staging SQL Server instance
+   PART B  -> run on your Churn_DWH SQL Server instance
    PART C  -> SSIS source queries (paste into OLE DB Sources, don't run here)
+   If the databases are on different SQL Server instances, use
+   01_create_staging_tables.sql and 02_create_star_schema.sql separately.
 
    Dataset 1 : customer_churn_dataset-training-master.csv
                customer_churn_dataset-testing-master.csv
@@ -11,7 +13,7 @@
 
 
 /* =====================================================================
-   PART A - STAGING  (connect SSMS to SQLEXPRESS01)
+   PART A - STAGING  (connect SSMS to your Churn_Staging instance)
    Raw tables: every column VARCHAR(50), names = CSV headers, so the
    Flat File sources map 1:1 with no conversion errors.
    ===================================================================== */
@@ -100,7 +102,7 @@ GO
 
 
 /* =====================================================================
-   PART B - DATA WAREHOUSE / STAR SCHEMA  (connect SSMS to CHUM)
+   PART B - DATA WAREHOUSE / STAR SCHEMA  (connect SSMS to your Churn_DWH instance)
    Key columns copied from staging stay VARCHAR (used by the Lookups).
    Columns created by Derived Column transformations are NVARCHAR,
    because SSIS string functions output Unicode (DT_WSTR).

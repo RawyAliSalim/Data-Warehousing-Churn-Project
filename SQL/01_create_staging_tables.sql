@@ -1,6 +1,6 @@
--- Run on LAPTOP-5Q67MFKR\SQLEXPRESS01
+-- Run on the SQL Server instance that will host Churn_Staging.
 /* =====================================================================
-   PART A - STAGING  (connect SSMS to SQLEXPRESS01)
+   PART A - STAGING  (connect SSMS to your Churn_Staging instance)
    Raw tables: every column VARCHAR(50), names = CSV headers, so the
    Flat File sources map 1:1 with no conversion errors.
    ===================================================================== */
@@ -86,5 +86,4 @@ CREATE TABLE dbo.stg_Customer_All (
     Churn              INT NULL         -- 1 = churned, 0 = stayed (Telco Yes/No converted)
 );
 GO
-
 

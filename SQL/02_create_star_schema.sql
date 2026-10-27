@@ -1,6 +1,6 @@
--- Run on LAPTOP-5Q67MFKR\CHUM
+-- Run on the SQL Server instance that will host Churn_DWH.
 /* =====================================================================
-   PART B - DATA WAREHOUSE / STAR SCHEMA  (connect SSMS to CHUM)
+   PART B - DATA WAREHOUSE / STAR SCHEMA  (connect SSMS to your Churn_DWH instance)
    Key columns copied from staging stay VARCHAR (used by the Lookups).
    Columns created by Derived Column transformations are NVARCHAR,
    because SSIS string functions output Unicode (DT_WSTR).
@@ -84,4 +84,3 @@ CREATE TABLE dbo.Fact_Churn (
     Churn              INT NULL
 );
 GO
-
