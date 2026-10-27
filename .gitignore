@@ -13,15 +13,18 @@ obj/
 
 # SSIS
 *.dtsx.bak
-*.database
 *.ispac
 *.dtproj.user
+/ETL_Project/ETL_Project/*.database
 
 # Local-only files
 *.log
 *.tmp
 .DS_Store
 Thumbs.db
+
+# Project.params and .conmgr files are shared SSIS source configuration.
+# Keep them tracked; review local parameter-value changes before committing.
 
 # Other
 .vscode/

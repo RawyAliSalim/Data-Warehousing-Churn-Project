@@ -3,10 +3,12 @@
   DTS:ObjectName="LAPTOP-5Q67MFKR_SQLEXPRESS01"
   DTS:DTSID="{0A666918-4BB5-453B-89A6-E1CF4DD46994}"
   DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">"Data Source=" + @[$Project::ServerName_Staging] + ";Initial Catalog=Churn_Staging;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-ETL_Project;"</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=LAPTOP-5Q67MFKR\SQLEXPRESS01;Initial Catalog=Churn_Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-{0A666918-4BB5-453B-89A6-E1CF4DD46994}LAPTOP-5Q67MFKR_SQLEXPRESS01;" />
+      DTS:ConnectionString="Data Source=LAPTOP-HGONJJV6\SQLEXPRESS01;Initial Catalog=Churn_Staging;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-ETL_Project;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

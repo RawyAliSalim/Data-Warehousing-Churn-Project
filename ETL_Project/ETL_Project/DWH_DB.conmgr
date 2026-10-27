@@ -3,10 +3,12 @@
   DTS:ObjectName="DWH_DB"
   DTS:DTSID="{54EEDF43-68AD-47C2-B73D-EE7D938C23B5}"
   DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">"Data Source=" + @[$Project::ServerName_DWH] + ";Initial Catalog=Churn_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-ETL_Project;Auto Translate=False;"</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=LAPTOP-5Q67MFKR\CHUM;Initial Catalog=Churn_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ETL_Project-{54EEDF43-68AD-47C2-B73D-EE7D938C23B5}LAPTOP-5Q67MFKR\CHUM.Churn_DWH;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=LAPTOP-HGONJJV6\CHURN_PROCESSED;Initial Catalog=Churn_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-ETL_Project;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
