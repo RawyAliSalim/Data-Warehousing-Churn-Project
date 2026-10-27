@@ -1,0 +1,1624 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/27/2026 4:22:52 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-HGONJJV6"
+  DTS:CreatorName="LAPTOP-HGONJJV6\asus"
+  DTS:DTSID="{C73802C6-78B5-4735-85CC-124653921A1F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{8DF3F409-21B1-4875-8AB2-134717A20C3C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A166EF7F-64EA-4E23-A92F-3FCA9F444D61}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\asus\Documents\BUE Projects\Data mining and Wearhouse\Project\Data-Warehousing-Churn-Project\Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{5A77FE67-841D-4296-B8F8-1DF11183F23C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{B92A2CAB-5A83-4CB3-8FA8-3B1598A7B7A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SeniorCitizen"
+              DTS:DTSID="{766E288B-5807-4587-A9AD-F57184B5B87C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Partner"
+              DTS:DTSID="{48032BDA-7636-4EE8-AC1A-B8A868A83682}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dependents"
+              DTS:DTSID="{ED7FFF1B-DC6D-4036-9F72-006A4D7ABB0C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tenure"
+              DTS:DTSID="{8AD374DC-C7FA-462A-8AD1-E412E267483B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PhoneService"
+              DTS:DTSID="{2ED4E945-7546-41D6-9179-1BF3BB7DF0F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MultipleLines"
+              DTS:DTSID="{EA0E77E4-A63D-494C-A351-62F179E6EF37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="InternetService"
+              DTS:DTSID="{8A9213E1-DE6F-43E4-A85B-FDE15840E2CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OnlineSecurity"
+              DTS:DTSID="{D0A2BD59-3E89-4A67-AC8E-A7D07C89D376}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OnlineBackup"
+              DTS:DTSID="{EE567426-1656-4791-989F-E01757EB998D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DeviceProtection"
+              DTS:DTSID="{571B5762-D874-4EA1-A5C5-1EDBA96188B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TechSupport"
+              DTS:DTSID="{295595AA-7D25-4182-93E7-4D505746EB45}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreamingTV"
+              DTS:DTSID="{56EB326D-D578-492C-9A19-FEA344AF0B23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreamingMovies"
+              DTS:DTSID="{F1456912-7C6A-4269-989D-2F7569A3BE76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract"
+              DTS:DTSID="{18C0D3D6-A796-4C9C-9B0E-50DDEEB43744}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PaperlessBilling"
+              DTS:DTSID="{AA63C02B-0639-4F48-BBBB-7AE6C984D23F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PaymentMethod"
+              DTS:DTSID="{CAFE023E-4BA4-4221-8D55-E31DAC3187D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MonthlyCharges"
+              DTS:DTSID="{0534D887-2AB8-4FA3-BBFF-66759211E410}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalCharges"
+              DTS:DTSID="{5DA71379-CC6D-40EC-8AF1-3072E26EA19F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Churn "
+              DTS:DTSID="{15A924D0-CDA7-44C3-A0EE-424B2DFB4CD4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ETL Dim_Billing"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D5BA56EB-859A-4196-8A40-61F81D12949C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL Dim_Billing"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL Dim_Billing\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input].Columns[Contract]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Contract]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input].Columns[PaymentMethod]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PaymentMethod"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PaymentMethod]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input].Columns[MonthlyCharges]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MonthlyCharges"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MonthlyCharges]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Charge_Dollars]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Charge_Dollars]"
+                      name="Charge_Dollars"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TOKEN](#{Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MonthlyCharges]},".",1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TOKEN(MonthlyCharges,".",1)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Charge_Cents]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Charge_Cents]"
+                      name="Charge_Cents"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TOKENCOUNT](#{Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MonthlyCharges]},".") &gt; 1 ? [TOKEN](#{Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MonthlyCharges]},".",2) : "0"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TOKENCOUNT(MonthlyCharges,".") &gt; 1 ? TOKEN(MonthlyCharges,".",2) : "0"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Contract_Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Contract_Code]"
+                      name="Contract_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE](#{Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Contract]}," ","_")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(Contract," ","_")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Payment_Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Payment_Code]"
+                      name="Payment_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE](#{Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PaymentMethod]}," ","_")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(PaymentMethod," ","_")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Billing\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dim_Billing]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Dim_Billing\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{54EEDF43-68AD-47C2-B73D-EE7D938C23B5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DWH_DB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="customerID"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[customerID]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gender"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[gender]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SeniorCitizen]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SeniorCitizen"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeniorCitizen]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[SeniorCitizen]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Partner]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Partner"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Partner]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Partner]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Dependents]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Dependents"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dependents]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Dependents]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tenure]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tenure"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tenure]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[tenure]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PhoneService]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PhoneService"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhoneService]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PhoneService]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MultipleLines]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MultipleLines"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MultipleLines]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MultipleLines]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InternetService]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="InternetService"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InternetService]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[InternetService]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OnlineSecurity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OnlineSecurity"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineSecurity]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[OnlineSecurity]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OnlineBackup]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OnlineBackup"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineBackup]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[OnlineBackup]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DeviceProtection]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DeviceProtection"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeviceProtection]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[DeviceProtection]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TechSupport]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TechSupport"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechSupport]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[TechSupport]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreamingTV]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreamingTV"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingTV]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[StreamingTV]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreamingMovies]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreamingMovies"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingMovies]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[StreamingMovies]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Contract]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Contract]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaperlessBilling]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PaperlessBilling"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaperlessBilling]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PaperlessBilling]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaymentMethod]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PaymentMethod"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentMethod]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PaymentMethod]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MonthlyCharges]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MonthlyCharges"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthlyCharges]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MonthlyCharges]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TotalCharges]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TotalCharges"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCharges]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[TotalCharges]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Churn ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Churn "
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn ]"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Churn ]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Charge_Dollars]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Charge_Dollars"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Charge_Dollars]"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Charge_Dollars]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Charge_Cents]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Charge_Cents"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Charge_Cents]"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Charge_Cents]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Contract_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Contract_Code"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract_Code]"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Contract_Code]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Payment_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Payment_Code"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment_Code]"
+                      lineageId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output].Columns[Payment_Code]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeniorCitizen]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SeniorCitizen" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Partner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Partner" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dependents]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Dependents" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tenure" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhoneService]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PhoneService" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MultipleLines]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MultipleLines" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InternetService]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="InternetService" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineSecurity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OnlineSecurity" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineBackup]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OnlineBackup" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeviceProtection]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DeviceProtection" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechSupport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TechSupport" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingTV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreamingTV" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingMovies]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreamingMovies" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaperlessBilling]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PaperlessBilling" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PaymentMethod" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthlyCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MonthlyCharges" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TotalCharges" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn " />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Charge_Dollars]"
+                      dataType="wstr"
+                      length="50"
+                      name="Charge_Dollars" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Charge_Cents]"
+                      dataType="wstr"
+                      length="50"
+                      name="Charge_Cents" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract_Code]"
+                      dataType="wstr"
+                      length="50"
+                      name="Contract_Code" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment_Code]"
+                      dataType="wstr"
+                      length="50"
+                      name="Payment_Code" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Billing\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Billing\Telco CSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Telco CSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Dim_Billing\Telco CSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[customerID]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[customerID]"
+                      name="customerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[gender]"
+                      name="gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[SeniorCitizen]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[SeniorCitizen]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[SeniorCitizen]"
+                      name="SeniorCitizen"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Partner]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[Partner]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Partner]"
+                      name="Partner"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Dependents]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[Dependents]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Dependents]"
+                      name="Dependents"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[tenure]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[tenure]"
+                      name="tenure"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PhoneService]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[PhoneService]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PhoneService]"
+                      name="PhoneService"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MultipleLines]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[MultipleLines]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MultipleLines]"
+                      name="MultipleLines"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[InternetService]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[InternetService]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[InternetService]"
+                      name="InternetService"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[OnlineSecurity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[OnlineSecurity]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[OnlineSecurity]"
+                      name="OnlineSecurity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[OnlineBackup]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[OnlineBackup]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[OnlineBackup]"
+                      name="OnlineBackup"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[DeviceProtection]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[DeviceProtection]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[DeviceProtection]"
+                      name="DeviceProtection"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[TechSupport]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[TechSupport]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[TechSupport]"
+                      name="TechSupport"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[StreamingTV]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[StreamingTV]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[StreamingTV]"
+                      name="StreamingTV"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[StreamingMovies]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[StreamingMovies]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[StreamingMovies]"
+                      name="StreamingMovies"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Contract]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[Contract]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Contract]"
+                      name="Contract"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PaperlessBilling]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[PaperlessBilling]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PaperlessBilling]"
+                      name="PaperlessBilling"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PaymentMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[PaymentMethod]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[PaymentMethod]"
+                      name="PaymentMethod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MonthlyCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[MonthlyCharges]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[MonthlyCharges]"
+                      name="MonthlyCharges"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[TotalCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[TotalCharges]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[TotalCharges]"
+                      name="TotalCharges"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].Columns[Churn ]"
+                      name="Churn "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[SeniorCitizen]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SeniorCitizen" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[Partner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Partner" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[Dependents]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Dependents" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tenure" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[PhoneService]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PhoneService" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[MultipleLines]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MultipleLines" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[InternetService]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="InternetService" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[OnlineSecurity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OnlineSecurity" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[OnlineBackup]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OnlineBackup" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[DeviceProtection]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DeviceProtection" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[TechSupport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TechSupport" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[StreamingTV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreamingTV" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[StreamingMovies]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreamingMovies" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[Contract]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[PaperlessBilling]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PaperlessBilling" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[PaymentMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PaymentMethod" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[MonthlyCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MonthlyCharges" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[TotalCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TotalCharges" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn " />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ETL Dim_Billing.Paths[Derived Column Output]"
+              endId="Package\ETL Dim_Billing\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\ETL Dim_Billing\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\ETL Dim_Billing.Paths[Flat File Source Output]"
+              endId="Package\ETL Dim_Billing\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\ETL Dim_Billing\Telco CSV.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\ETL Dim_Billing"
+          TopLeft="381.749983180315,62.2894730606733" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL Dim_Billing">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="130.666666666667,42.6666666666667"
+          Id="Package\ETL Dim_Billing\Telco CSV"
+          TopLeft="357.374984269962,37.6578943837548" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\ETL Dim_Billing\Derived Column"
+          TopLeft="341.249984744937,154.631577249544" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Billing.Paths[Flat File Source Output]"
+          TopLeft="420.979151174116,80.3245610504214">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.3070161991228"
+              Start="0,0"
+              End="0,66.8070161991228">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.8070161991228" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\ETL Dim_Billing\OLE DB Destination"
+          TopLeft="339.374984828756,262.736839220465" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Billing.Paths[Derived Column Output]"
+          TopLeft="422.979151453513,197.298243916211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.4385953042537"
+              Start="0,0"
+              End="0,57.9385953042537">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.9385953042537" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Dim_Billing\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
