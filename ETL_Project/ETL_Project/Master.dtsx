@@ -12,8 +12,8 @@
   DTS:ObjectName="Master"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{3FA7232E-897F-4B4F-903C-AF4ADE6D164C}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{526EFA9C-BBCD-4D76-BA21-37AA8F6F000A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -250,35 +250,35 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132.666666666667,41.3333333333334"
+          Size="132.8,41.6"
           Id="Package\Reset DWH"
           TopLeft="369.999979784092,38.1333330681589" />
         <NodeLayout
-          Size="164.666666666667,41.3333333333334"
+          Size="164.8,41.6"
           Id="Package\Reset Staging"
           TopLeft="359.999980330468,138.666665702396" />
         <NodeLayout
-          Size="164,41.3333333333334"
+          Size="164,41.6"
           Id="Package\Run Dim_Contract"
           TopLeft="248.333319764999,337.266664527191" />
         <NodeLayout
-          Size="184.666666666667,41.3333333333334"
+          Size="184.8,41.6"
           Id="Package\Run Dim_Customer"
           TopLeft="5.83333301461407,331.06666436447" />
         <NodeLayout
-          Size="165.333333333334,41.3333333333334"
+          Size="165.6,41.6"
           Id="Package\Run Dim_Payment"
           TopLeft="483.333306925165,340.999997884631" />
         <NodeLayout
-          Size="192.666666666667,41.3333333333334"
+          Size="192.8,41.6"
           Id="Package\Run Dim_Subscription"
           TopLeft="726.666626963352,338.266664581431" />
         <NodeLayout
-          Size="184.666666666667,41.3333333333334"
+          Size="184.8,41.6"
           Id="Package\Run Load_Fact"
           TopLeft="375.599979784092,452.266663966709" />
         <NodeLayout
-          Size="184.666666666667,41.3333333333334"
+          Size="184.8,41.6"
           Id="Package\Run Load_Staging"
           TopLeft="345.833314437834,232.266665051513" />
         <EdgeLayout

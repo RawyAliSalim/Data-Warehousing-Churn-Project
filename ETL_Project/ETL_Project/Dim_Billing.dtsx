@@ -22,6 +22,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{A166EF7F-64EA-4E23-A92F-3FCA9F444D61}"
       DTS:ObjectName="Flat File Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\\WA_Fn-UseC_-Telco-Customer-Churn.csv"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
