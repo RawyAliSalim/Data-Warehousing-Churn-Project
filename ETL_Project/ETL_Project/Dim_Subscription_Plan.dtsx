@@ -1,0 +1,2319 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/28/2026 4:07:15 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-SS3OU6Q"
+  DTS:CreatorName="DESKTOP-SS3OU6Q\Khaled"
+  DTS:DTSID="{1047C569-529B-402F-B41D-F94EA9850017}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Dim_Subscription_Plan"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{12001710-13B6-42AE-8570-9122D671671F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{226500C6-C179-4B63-9B42-63E09DD359EB}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\khali\OneDrive\Desktop\dm\Data-Warehousing-Churn-Project\Data\customer_churn_dataset-training-master.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{E4C82F87-BDE2-44E3-82F2-0A79FED085E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{F0517491-3919-4651-B3EF-E17EC1A8662C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{B30D353B-F3CE-45F6-A9AF-216C6D5BCC91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tenure"
+              DTS:DTSID="{9CEA0B35-65E6-4AC5-9F6E-7703B9F55D16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Usage Frequency"
+              DTS:DTSID="{B400CDD7-BF14-42E1-9855-7C553BF0673A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Support Calls"
+              DTS:DTSID="{BEFE52CE-48C3-44AB-B9B1-8A899FCBB43F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payment Delay"
+              DTS:DTSID="{C95D019E-9B81-46F9-9889-565C1010BF1E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Subscription Type"
+              DTS:DTSID="{4332990E-4028-460D-BE87-94A3D214B11B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Length"
+              DTS:DTSID="{018B70E9-B310-4CD8-8628-D3A8F723ECB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Spend"
+              DTS:DTSID="{869A4F5C-D532-4A7C-BBB0-4188816DB38D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Interaction"
+              DTS:DTSID="{6D8FE5FD-481E-426C-B837-6FB32D52D653}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Churn "
+              DTS:DTSID="{A4F53BD9-ED6D-4FD3-913F-03BDCB1BF2F1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{00EC0A1E-506D-4B3C-98BB-4D1103569CE2}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\khali\OneDrive\Desktop\dm\Data-Warehousing-Churn-Project\Data\customer_churn_dataset-testing-master.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{5D3A9D01-3EF0-4D4D-9E12-1806E833F41D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{A7225DB4-830B-46B0-A713-4A0CEACCABD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{D3EBDC62-58A9-4D56-80B7-EF8E7BE98ABE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tenure"
+              DTS:DTSID="{A2BA51C1-6A8F-418D-B6B7-7444FA651A11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Usage Frequency"
+              DTS:DTSID="{E8124FC4-C03D-404A-B94E-307C86968F84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Support Calls"
+              DTS:DTSID="{5FDFE920-65DF-4D69-BBE5-151DAB021D65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payment Delay"
+              DTS:DTSID="{8E8CA691-56A1-4F6A-B5DA-3CFD9672DA43}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Subscription Type"
+              DTS:DTSID="{AAE3502D-EEF8-497F-A896-6C2D742E76ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Length"
+              DTS:DTSID="{09C4A73D-146B-4FAE-8F8F-C3A01EA3DF5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Spend"
+              DTS:DTSID="{8E7ACA28-EB1B-487C-960F-BDCA1B9594C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Interaction"
+              DTS:DTSID="{5FE452BD-86DA-49FF-9501-111A39EB857F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Churn "
+              DTS:DTSID="{C9504212-C246-4FF9-AFE4-7BDD96452A42}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ETL Dim_Subscription_Plan"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{60942017-3AD9-4C1D-B854-C8284D279DC7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL Dim_Subscription_Plan"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL Dim_Subscription_Plan\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Subscription_Plan\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Conditional Split.Inputs[Conditional Split Input].Columns[CustomerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerID"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Conditional Split.Inputs[Conditional Split Input].Columns[Contract Length]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract Length"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Conditional Split.Outputs[Valid]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Valid"
+                  synchronousInputId="Package\ETL Dim_Subscription_Plan\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[CustomerID]} != "" &amp;&amp; #{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]} != "Monthly"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">CustomerID != "" &amp;&amp; [Contract Length] != "Monthly"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\ETL Dim_Subscription_Plan\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\ETL Dim_Subscription_Plan\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Subscription_Plan\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Subscription_Plan\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Derived Column.Inputs[Derived Column Input].Columns[Subscription Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Subscription Type"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Derived Column.Inputs[Derived Column Input].Columns[Contract Length]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract Length"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\ETL Dim_Subscription_Plan\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Output].Columns[Plan_Label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="101"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Output].Columns[Plan_Label]"
+                      name="Plan_Label"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[UPPER]([SUBSTRING](#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]},1,1)) + [LOWER]([SUBSTRING](#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]},2,[LEN](#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]}))) + " " + [LOWER](#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">UPPER(SUBSTRING([Subscription Type],1,1)) + LOWER(SUBSTRING([Subscription Type],2,LEN([Subscription Type]))) + " " + LOWER([Contract Length])</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Output].Columns[Plan_Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="101"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Output].Columns[Plan_Code]"
+                      name="Plan_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE](#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]} + " " + #{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]}," ","_")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE([Subscription Type] + " " + [Contract Length]," ","_")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\ETL Dim_Subscription_Plan\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dim_Subscription_Plan]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{54EEDF43-68AD-47C2-B73D-EE7D938C23B5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DWH_DB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustomerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Tenure]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Tenure"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tenure]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Tenure]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Usage Frequency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Usage Frequency"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Usage Frequency]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Support Calls]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Support Calls"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Support Calls]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Support Calls]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Payment Delay]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment Delay"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Delay]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Payment Delay]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Subscription Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Subscription Type"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subscription Type]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Contract Length]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract Length"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract Length]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Total Spend]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total Spend"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total Spend]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Total Spend]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Interaction]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Interaction"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Interaction]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Last Interaction]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Churn ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Churn "
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn ]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Churn ]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Plan_Label]"
+                      cachedDataType="wstr"
+                      cachedLength="101"
+                      cachedName="Plan_Label"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Plan_Label]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Output].Columns[Plan_Label]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Plan_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="101"
+                      cachedName="Plan_Code"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Plan_Code]"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Output].Columns[Plan_Code]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tenure" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Usage Frequency" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Support Calls" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Payment Delay" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Subscription Type" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract Length" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Total Spend" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Interaction" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn " />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Plan_Label]"
+                      dataType="wstr"
+                      length="101"
+                      name="Plan_Label" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Plan_Code]"
+                      dataType="wstr"
+                      length="101"
+                      name="Plan_Code" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Subscription_Plan\Testing Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Testing Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Dim_Subscription_Plan\Testing Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Tenure]"
+                      name="Tenure"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Usage Frequency]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Usage Frequency]"
+                      name="Usage Frequency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Support Calls]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Support Calls]"
+                      name="Support Calls"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Payment Delay]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Payment Delay]"
+                      name="Payment Delay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Subscription Type]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Subscription Type]"
+                      name="Subscription Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Contract Length]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Contract Length]"
+                      name="Contract Length"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Total Spend]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Total Spend]"
+                      name="Total Spend"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Last Interaction]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Last Interaction]"
+                      name="Last Interaction"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Churn ]"
+                      name="Churn "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tenure" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Usage Frequency" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Support Calls" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Payment Delay" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Subscription Type" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract Length" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Total Spend" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Interaction" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn " />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Subscription_Plan\Training Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Training Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Dim_Subscription_Plan\Training Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Tenure]"
+                      name="Tenure"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Usage Frequency]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Usage Frequency]"
+                      name="Usage Frequency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Support Calls]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Support Calls]"
+                      name="Support Calls"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Payment Delay]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Payment Delay]"
+                      name="Payment Delay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Subscription Type]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Subscription Type]"
+                      name="Subscription Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Contract Length]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Contract Length]"
+                      name="Contract Length"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Total Spend]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Total Spend]"
+                      name="Total Spend"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Last Interaction]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Last Interaction]"
+                      name="Last Interaction"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Churn ]"
+                      name="Churn "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tenure" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Usage Frequency" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Support Calls" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Payment Delay" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Subscription Type" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract Length" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Total Spend" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Interaction" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].ExternalColumns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn " />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Subscription_Plan\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[CustomerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerID"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[CustomerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Age]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Age]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Gender]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Gender]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Tenure]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Tenure"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Tenure]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Tenure]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Usage Frequency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Usage Frequency"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Usage Frequency]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Support Calls]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Support Calls"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Support Calls]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Support Calls]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Payment Delay]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment Delay"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Payment Delay]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Payment Delay]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Subscription Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Subscription Type"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Subscription Type]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Contract Length]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract Length"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Contract Length]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Total Spend]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total Spend"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Total Spend]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Total Spend]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Last Interaction]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Interaction"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Last Interaction]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Last Interaction]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1].Columns[Churn ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Churn "
+                      lineageId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output].Columns[Churn ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Churn ]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[CustomerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerID"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[CustomerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Age]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Age]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Gender]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Gender]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Tenure]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Tenure"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Tenure]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Tenure]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Usage Frequency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Usage Frequency"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Usage Frequency]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Support Calls]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Support Calls"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Support Calls]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Support Calls]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Payment Delay]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment Delay"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Payment Delay]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Payment Delay]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Subscription Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Subscription Type"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Subscription Type]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Contract Length]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract Length"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Contract Length]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Total Spend]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total Spend"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Total Spend]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Total Spend]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Last Interaction]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Interaction"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Last Interaction]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Last Interaction]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2].Columns[Churn ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Churn "
+                      lineageId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output].Columns[Churn ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Churn ]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[CustomerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Age]"
+                      name="Age" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Gender]"
+                      name="Gender" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Tenure]"
+                      name="Tenure" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Usage Frequency]"
+                      name="Usage Frequency" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Support Calls]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Support Calls]"
+                      name="Support Calls" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Payment Delay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Payment Delay]"
+                      name="Payment Delay" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Subscription Type]"
+                      name="Subscription Type" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Contract Length]"
+                      name="Contract Length" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Total Spend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Total Spend]"
+                      name="Total Spend" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Last Interaction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Last Interaction]"
+                      name="Last Interaction" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Churn ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1].Columns[Churn ]"
+                      name="Churn " />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ETL Dim_Subscription_Plan.Paths[Derived Column Output]"
+              endId="Package\ETL Dim_Subscription_Plan\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\ETL Dim_Subscription_Plan\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\ETL Dim_Subscription_Plan.Paths[Flat File Source Output]"
+              endId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 1]"
+              name="Flat File Source Output"
+              startId="Package\ETL Dim_Subscription_Plan\Training Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\ETL Dim_Subscription_Plan.Paths[Flat File Source Output1]"
+              endId="Package\ETL Dim_Subscription_Plan\Union All.Inputs[Union All Input 2]"
+              name="Flat File Source Output"
+              startId="Package\ETL Dim_Subscription_Plan\Testing Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\ETL Dim_Subscription_Plan.Paths[Union All Output 1]"
+              endId="Package\ETL Dim_Subscription_Plan\Conditional Split.Inputs[Conditional Split Input]"
+              name="Union All Output 1"
+              startId="Package\ETL Dim_Subscription_Plan\Union All.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\ETL Dim_Subscription_Plan.Paths[Valid]"
+              endId="Package\ETL Dim_Subscription_Plan\Derived Column.Inputs[Derived Column Input]"
+              name="Valid"
+              startId="Package\ETL Dim_Subscription_Plan\Conditional Split.Outputs[Valid]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\ETL Dim_Subscription_Plan"
+          TopLeft="456.666641715501,158.599998897115" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL Dim_Subscription_Plan">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\ETL Dim_Subscription_Plan\Training Source"
+          TopLeft="227.499987569948,97.9333326523171" />
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\ETL Dim_Subscription_Plan\Testing Source"
+          TopLeft="623.333299275903,101.399999294877" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\ETL Dim_Subscription_Plan\Union All"
+          TopLeft="446.666642261877,288.599997993112" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Subscription_Plan.Paths[Flat File Source Output]"
+          TopLeft="303.499987569948,139.533332652317">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="184.499988025262,149.066665340795"
+              Start="0,0"
+              End="184.499988025262,141.566665340795">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,84.263157109681" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,84.263157109681"
+                    Point2="0,88.263157109681"
+                    Point3="4,88.263157109681" />
+                  <mssgle:LineSegment
+                    End="180.499988025262,88.263157109681" />
+                  <mssgle:CubicBezierSegment
+                    Point1="180.499988025262,88.263157109681"
+                    Point2="184.499988025262,88.263157109681"
+                    Point3="184.499988025262,92.263157109681" />
+                  <mssgle:LineSegment
+                    End="184.499988025262,141.566665340795" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Dim_Subscription_Plan.Paths[Flat File Source Output1]"
+          TopLeft="697.333299275903,142.999999294877">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-171.99999034736,145.599998698235"
+              Start="0,0"
+              End="-171.99999034736,138.099998698235">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,82.2105255450073" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,82.2105255450073"
+                    Point2="0,86.2105255450073"
+                    Point3="-4,86.2105255450073" />
+                  <mssgle:LineSegment
+                    End="-167.99999034736,86.2105255450073" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-167.99999034736,86.2105255450073"
+                    Point2="-171.99999034736,86.2105255450073"
+                    Point3="-171.99999034736,90.2105255450073" />
+                  <mssgle:LineSegment
+                    End="-171.99999034736,138.099998698235" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\ETL Dim_Subscription_Plan\Conditional Split"
+          TopLeft="437.499976096055,406.466663840148" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Subscription_Plan.Paths[Union All Output 1]"
+          TopLeft="510.483309178966,330.199997993112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76.2666658470366"
+              Start="0,0"
+              End="0,68.7666658470366">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.7666658470366" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\ETL Dim_Subscription_Plan\Derived Column"
+          TopLeft="435.833309520451,537.333329596784" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Subscription_Plan.Paths[Valid]"
+          TopLeft="513.266642808253,448.066663840148">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,89.2666657566361"
+              Start="0,0"
+              End="0,81.7666657566361">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.7666657566361" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-11.351171875,36.0088211595681,22.70234375,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\ETL Dim_Subscription_Plan\OLE DB Destination"
+          TopLeft="433.333309657045,635.916662244582" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Subscription_Plan.Paths[Derived Column Output]"
+          TopLeft="515.583309588748,578.933329596784">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.9833326477971"
+              Start="0,0"
+              End="0,49.4833326477971">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.4833326477971" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Dim_Subscription_Plan\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
