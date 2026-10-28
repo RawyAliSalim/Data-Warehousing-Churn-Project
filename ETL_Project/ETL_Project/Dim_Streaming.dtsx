@@ -1,0 +1,1803 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/28/2026 7:12:12 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MOHAMED"
+  DTS:CreatorName="MOHAMED\lenovo_new"
+  DTS:DTSID="{B5C65AD8-2822-4461-9A5A-57FA3B79A570}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Dim_Streaming"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{6133933E-B8CD-4829-88D1-D6FD1096EB10}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A92E7A90-D720-47A6-8DD3-6545B54069D8}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\lenovo_new\Desktop\mohamed\Data-Warehousing-Churn-Project\Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{705C6A01-842D-49E6-8405-C4F56ADA7C26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{FF811DFE-C293-4A93-B37B-AE8C029F4AA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SeniorCitizen"
+              DTS:DTSID="{5183E944-B28D-4E2D-AB28-67B5654DC0CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Partner"
+              DTS:DTSID="{C57FCF19-5D44-4563-B584-A43322773203}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dependents"
+              DTS:DTSID="{47460687-6827-45B2-94B8-570AA1F2589F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tenure"
+              DTS:DTSID="{F5270281-8873-4D50-8A46-F1806E0B9C37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PhoneService"
+              DTS:DTSID="{2798AD3F-FEB0-4ED7-8111-D0B3313F21B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MultipleLines"
+              DTS:DTSID="{94BA7093-12AC-43D2-8141-ECDED095F301}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="InternetService"
+              DTS:DTSID="{EF856C70-86A4-454B-885A-9D5D26BE6BBB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OnlineSecurity"
+              DTS:DTSID="{98CE4FBD-D698-4DC9-A1E1-84DE64452E2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OnlineBackup"
+              DTS:DTSID="{A4E5642E-B960-4618-AA23-96EFA3D29695}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DeviceProtection"
+              DTS:DTSID="{F214E42F-54E9-4DE8-A4E5-63D3BBA15940}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TechSupport"
+              DTS:DTSID="{26FBD842-8E85-4B04-8367-E53A9250E23A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreamingTV"
+              DTS:DTSID="{5FDCA542-7B87-4AF4-BCE3-DE0EF5C375A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreamingMovies"
+              DTS:DTSID="{576719E7-A336-4042-9714-22D5AE7F9022}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract"
+              DTS:DTSID="{AA2AC75A-CD36-411E-999C-DD6F4D756A63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PaperlessBilling"
+              DTS:DTSID="{30CC75D9-FDCD-47A3-883B-12BDFB6D90FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PaymentMethod"
+              DTS:DTSID="{6A0F769E-1669-4522-B025-9D086F3FEF61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MonthlyCharges"
+              DTS:DTSID="{6ABA7231-B8D7-4F0A-8645-15B644A16218}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalCharges"
+              DTS:DTSID="{B879EFAB-A5F4-48C6-A1FA-341221261E35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Churn"
+              DTS:DTSID="{4AF85535-2B09-42AE-A252-1A4BB174D9EE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ETL Dim_Streaming"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0F219D14-AEA1-471E-BD99-FB2EB96CFD13}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL Dim_Streaming"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL Dim_Streaming\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Streaming\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\Conditional Split.Inputs[Conditional Split Input].Columns[StreamingTV]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreamingTV"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\Conditional Split.Inputs[Conditional Split Input].Columns[StreamingMovies]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreamingMovies"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Streaming\Conditional Split.Outputs[valid]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="valid"
+                  synchronousInputId="Package\ETL Dim_Streaming\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]} == "Yes" || #{Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]} == "Yes"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">StreamingTV == "Yes" || StreamingMovies == "Yes"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Dim_Streaming\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\ETL Dim_Streaming\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Dim_Streaming\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\ETL Dim_Streaming\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Streaming\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Streaming\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column.Inputs[Derived Column Input].Columns[StreamingTV]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreamingTV"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column.Inputs[Derived Column Input].Columns[StreamingMovies]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreamingMovies"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\ETL Dim_Streaming\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output].Columns[Streaming_Package]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="13"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output].Columns[Streaming_Package]"
+                      name="Streaming_Package"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]} == "Yes" &amp;&amp; #{Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]} == "Yes" ? "tv and movies" : #{Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]} == "Yes" ? "tv only" : "movies only"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">StreamingTV == "Yes" &amp;&amp; StreamingMovies == "Yes" ? "tv and movies" : StreamingTV == "Yes" ? "tv only" : "movies only"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\ETL Dim_Streaming\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Streaming\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Streaming\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column 1.Inputs[Derived Column Input].Columns[Streaming_Package]"
+                      cachedDataType="wstr"
+                      cachedLength="13"
+                      cachedName="Streaming_Package"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output].Columns[Streaming_Package]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\ETL Dim_Streaming\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Output].Columns[Package_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="13"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Output].Columns[Package_Name]"
+                      name="Package_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[UPPER]([SUBSTRING](#{Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output].Columns[Streaming_Package]},1,1)) + [SUBSTRING](#{Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output].Columns[Streaming_Package]},2,[LEN](#{Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output].Columns[Streaming_Package]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">UPPER(SUBSTRING(Streaming_Package,1,1)) + SUBSTRING(Streaming_Package,2,LEN(Streaming_Package))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Output].Columns[Package_Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="13"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Output].Columns[Package_Code]"
+                      name="Package_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE](#{Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output].Columns[Streaming_Package]}," ","_")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(Streaming_Package," ","_")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\ETL Dim_Streaming\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Streaming\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Dim_Streaming\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customerID]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]"
+                      name="customerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[gender]"
+                      name="gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SeniorCitizen]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]"
+                      name="SeniorCitizen"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Partner]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Partner]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Partner]"
+                      name="Partner"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Dependents]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dependents]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Dependents]"
+                      name="Dependents"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tenure]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[tenure]"
+                      name="tenure"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[PhoneService]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PhoneService]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[PhoneService]"
+                      name="PhoneService"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[MultipleLines]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MultipleLines]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[MultipleLines]"
+                      name="MultipleLines"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[InternetService]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InternetService]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[InternetService]"
+                      name="InternetService"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineSecurity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineSecurity]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineSecurity]"
+                      name="OnlineSecurity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineBackup]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineBackup]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineBackup]"
+                      name="OnlineBackup"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[DeviceProtection]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DeviceProtection]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[DeviceProtection]"
+                      name="DeviceProtection"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[TechSupport]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TechSupport]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[TechSupport]"
+                      name="TechSupport"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingTV]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]"
+                      name="StreamingTV"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingMovies]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]"
+                      name="StreamingMovies"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Contract]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]"
+                      name="Contract"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[PaperlessBilling]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaperlessBilling]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[PaperlessBilling]"
+                      name="PaperlessBilling"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[PaymentMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaymentMethod]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[PaymentMethod]"
+                      name="PaymentMethod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[MonthlyCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MonthlyCharges]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[MonthlyCharges]"
+                      name="MonthlyCharges"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalCharges]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCharges]"
+                      name="TotalCharges"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Churn]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Churn]"
+                      length="50"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Churn]"
+                      name="Churn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SeniorCitizen]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SeniorCitizen" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Partner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Partner" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dependents]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Dependents" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tenure" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PhoneService]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PhoneService" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MultipleLines]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MultipleLines" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InternetService]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="InternetService" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineSecurity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OnlineSecurity" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[OnlineBackup]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OnlineBackup" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DeviceProtection]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DeviceProtection" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TechSupport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TechSupport" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingTV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreamingTV" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreamingMovies]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreamingMovies" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Contract]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaperlessBilling]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PaperlessBilling" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PaymentMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PaymentMethod" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MonthlyCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MonthlyCharges" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TotalCharges" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Churn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Dim_Streaming\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dim_Streaming]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Dim_Streaming\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{54EEDF43-68AD-47C2-B73D-EE7D938C23B5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DWH_DB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="customerID"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[customerID]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gender"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[gender]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SeniorCitizen]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SeniorCitizen"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeniorCitizen]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[SeniorCitizen]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Partner]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Partner"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Partner]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Partner]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Dependents]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Dependents"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dependents]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Dependents]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tenure]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tenure"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tenure]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[tenure]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PhoneService]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PhoneService"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhoneService]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[PhoneService]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MultipleLines]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MultipleLines"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MultipleLines]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[MultipleLines]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InternetService]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="InternetService"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InternetService]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[InternetService]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OnlineSecurity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OnlineSecurity"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineSecurity]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineSecurity]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OnlineBackup]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OnlineBackup"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineBackup]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[OnlineBackup]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DeviceProtection]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DeviceProtection"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeviceProtection]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[DeviceProtection]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TechSupport]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TechSupport"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechSupport]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[TechSupport]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreamingTV]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreamingTV"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingTV]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingTV]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreamingMovies]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreamingMovies"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingMovies]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[StreamingMovies]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Contract]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Contract"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaperlessBilling]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PaperlessBilling"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaperlessBilling]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[PaperlessBilling]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PaymentMethod]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PaymentMethod"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentMethod]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[PaymentMethod]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MonthlyCharges]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MonthlyCharges"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthlyCharges]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[MonthlyCharges]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TotalCharges]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TotalCharges"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCharges]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCharges]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Churn]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Churn"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn]"
+                      lineageId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output].Columns[Churn]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Streaming_Package]"
+                      cachedDataType="wstr"
+                      cachedLength="13"
+                      cachedName="Streaming_Package"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Streaming_Package]"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output].Columns[Streaming_Package]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Package_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="13"
+                      cachedName="Package_Name"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Package_Name]"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Output].Columns[Package_Name]" />
+                    <inputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Package_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="13"
+                      cachedName="Package_Code"
+                      externalMetadataColumnId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Package_Code]"
+                      lineageId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Output].Columns[Package_Code]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeniorCitizen]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SeniorCitizen" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Partner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Partner" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dependents]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Dependents" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tenure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tenure" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhoneService]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PhoneService" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MultipleLines]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MultipleLines" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InternetService]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="InternetService" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineSecurity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OnlineSecurity" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OnlineBackup]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OnlineBackup" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeviceProtection]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DeviceProtection" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechSupport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TechSupport" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingTV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreamingTV" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreamingMovies]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreamingMovies" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Contract" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaperlessBilling]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PaperlessBilling" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentMethod]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PaymentMethod" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthlyCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MonthlyCharges" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCharges]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TotalCharges" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Churn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Churn" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Streaming_Package]"
+                      dataType="wstr"
+                      length="13"
+                      name="Streaming_Package" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Package_Name]"
+                      dataType="wstr"
+                      length="13"
+                      name="Package_Name" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Package_Code]"
+                      dataType="wstr"
+                      length="13"
+                      name="Package_Code" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Dim_Streaming\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Dim_Streaming\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Dim_Streaming\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ETL Dim_Streaming.Paths[Derived Column Output]"
+              endId="Package\ETL Dim_Streaming\Derived Column 1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\ETL Dim_Streaming\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\ETL Dim_Streaming.Paths[Derived Column Output1]"
+              endId="Package\ETL Dim_Streaming\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\ETL Dim_Streaming\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\ETL Dim_Streaming.Paths[Flat File Source Output]"
+              endId="Package\ETL Dim_Streaming\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\ETL Dim_Streaming\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\ETL Dim_Streaming.Paths[valid]"
+              endId="Package\ETL Dim_Streaming\Derived Column.Inputs[Derived Column Input]"
+              name="valid"
+              startId="Package\ETL Dim_Streaming\Conditional Split.Outputs[valid]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="178,42"
+          Id="Package\ETL Dim_Streaming"
+          TopLeft="483,192" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL Dim_Streaming">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\ETL Dim_Streaming\Flat File Source"
+          TopLeft="510,98" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\ETL Dim_Streaming\Conditional Split"
+          TopLeft="504,189" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Streaming.Paths[Flat File Source Output]"
+          TopLeft="585.75,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="158,42"
+          Id="Package\ETL Dim_Streaming\Derived Column"
+          TopLeft="506,300" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Streaming.Paths[valid]"
+          TopLeft="584.25,231">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-10.8219921875,25.87548828125,21.643984375,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167,42"
+          Id="Package\ETL Dim_Streaming\Derived Column 1"
+          TopLeft="503,386" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Streaming.Paths[Derived Column Output]"
+          TopLeft="585.75,342">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\ETL Dim_Streaming\OLE DB Destination"
+          TopLeft="500,474" />
+        <EdgeLayout
+          Id="Package\ETL Dim_Streaming.Paths[Derived Column Output1]"
+          TopLeft="587.5,428">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Dim_Streaming\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
