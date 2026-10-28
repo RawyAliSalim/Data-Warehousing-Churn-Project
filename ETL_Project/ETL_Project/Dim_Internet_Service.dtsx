@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{2D144CC3-25C6-41A5-A520-31D7BB960747}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{73C38196-532A-40D2-9DAE-0272D5CDAD21}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -22,8 +22,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{59F80FA7-B943-44DC-A7A4-791AA4C002ED}"
       DTS:ObjectName="Flat File Connection Manager">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\\WA_Fn-UseC_-Telco-Customer-Churn.csv"</DTS:PropertyExpression>
+            <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\WA_Fn-UseC_-Telco-Customer-Churn.csv"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -33,7 +33,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\asus\Documents\BUE Projects\Data mining and Wearhouse\Project\Data-Warehousing-Churn-Project\Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
+          DTS:ConnectionString="Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -518,7 +518,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Dim_Internet_Service]</property>
+                  name="OpenRowset">[Dim_Internet_Service]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1651,35 +1651,41 @@
           Id="Package\ETL Dim_Internet_Service\Telco CSV"
           TopLeft="371.249983403832,94.4210515948545" />
         <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\ETL Dim_Internet_Service\OLE DB Destination"
+          TopLeft="357.999984242023,352.39473303327" />
+        <NodeLayout
           Size="157.333333333334,42.6666666666667"
           Id="Package\ETL Dim_Internet_Service\Conditional Split"
           TopLeft="363.749983739108,173.105261257233" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\ETL Dim_Internet_Service\Derived Column"
+          TopLeft="363.124983767048,264.105260258071" />
         <EdgeLayout
-          Id="Package\ETL Dim_Internet_Service.Paths[Flat File Source Output]"
-          TopLeft="439.49998357147,137.087718261521">
+          Id="Package\ETL Dim_Internet_Service.Paths[Derived Column Output]"
+          TopLeft="443.229150671202,306.771926924738">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.017542995712"
+              EndConnector="0,45.6228061085317"
               Start="0,0"
-              End="0,28.517542995712">
+              End="0,38.1228061085317">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.517542995712" />
+                    End="0,38.1228061085317" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-25.05849609375,13.5106218042658,50.1169921875,11.1015625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="156,42.6666666666667"
-          Id="Package\ETL Dim_Internet_Service\Derived Column"
-          TopLeft="363.124983767048,264.105260258071" />
         <EdgeLayout
           Id="Package\ETL Dim_Internet_Service.Paths[Valid]"
           TopLeft="441.770817086412,215.7719279239">
@@ -1700,34 +1706,32 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-11.351171875,15.5421544483357,22.70234375,9.7490234375"
+              BoundingBox="-41.269921875,14.6119786670857,82.53984375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\ETL Dim_Internet_Service\OLE DB Destination"
-          TopLeft="357.999984242023,352.39473303327" />
         <EdgeLayout
-          Id="Package\ETL Dim_Internet_Service.Paths[Derived Column Output]"
-          TopLeft="443.229150671202,306.771926924738">
+          Id="Package\ETL Dim_Internet_Service.Paths[Flat File Source Output]"
+          TopLeft="439.49998357147,137.087718261521">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.6228061085317"
+              EndConnector="0,36.017542995712"
               Start="0,0"
-              End="0,38.1228061085317">
+              End="0,28.517542995712">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.1228061085317" />
+                    End="0,28.517542995712" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-25.11953125,8.644513685356,50.2390625,11.228515625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

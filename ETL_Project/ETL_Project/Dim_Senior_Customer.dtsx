@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{73E6DE73-84E2-477D-AC6B-F97BA8A26D6C}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{8165269C-4F9F-4B95-A65F-AB0A18B5EF34}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -22,8 +22,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{047446D0-571A-454E-BF21-23661CDA2040}"
       DTS:ObjectName="Flat File Connection Manager">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\\WA_Fn-UseC_-Telco-Customer-Churn.csv"</DTS:PropertyExpression>
+            <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\WA_Fn-UseC_-Telco-Customer-Churn.csv"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -33,7 +33,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\HP\OneDrive - The British University in Egypt\Desktop\Data mining project\Data-Warehousing-Churn-Project\Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
+          DTS:ConnectionString="Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1551,7 +1551,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="205.6,41.6"
+          Size="205.333333333334,41.3333333333334"
           Id="Package\ETL Dim_Senior_Customer"
           TopLeft="354.166647315854,77.1333327969578" />
       </GraphLayout>
@@ -1563,19 +1563,19 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="151.2,41.6"
+          Size="151.333333333334,41.3333333333334"
           Id="Package\ETL Dim_Senior_Customer\Flat File Source"
           TopLeft="349.166647589042,57.1999996022383" />
         <NodeLayout
-          Size="153.6,41.6"
+          Size="153.333333333334,41.3333333333334"
           Id="Package\ETL Dim_Senior_Customer\Conditional Split"
           TopLeft="347.499981013438,142.133332344956" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171.333333333334,41.3333333333334"
           Id="Package\ETL Dim_Senior_Customer\OLE DB Destination"
           TopLeft="340.833314711022,318.933331115511" />
         <NodeLayout
-          Size="152.8,41.6"
+          Size="152.666666666667,41.3333333333334"
           Id="Package\ETL Dim_Senior_Customer\Derived Column"
           TopLeft="349.166647589042,227.066665087673" />
         <EdgeLayout

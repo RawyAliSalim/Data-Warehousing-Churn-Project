@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{CCE524E8-EE7B-4149-9074-068E93D21DC3}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{0F606D5E-1195-4785-8D01-A26F271A8026}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -553,7 +553,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="153.333333333334,42.6666666666667"
           Id="Package\Data Flow Task"
           TopLeft="335.83331498421,97.9333326523172" />
       </GraphLayout>
@@ -565,13 +565,21 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,41.6"
+          Size="152,41.3333333333334"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="338.333314847616,56.3333329415983" />
         <NodeLayout
-          Size="152.8,41.6"
+          Size="171.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="337.499981559814,320.666664436791" />
+        <NodeLayout
+          Size="152.666666666667,41.3333333333334"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="344.999981150032,148.199998969436" />
+        <NodeLayout
+          Size="161.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\Derived Column 1"
+          TopLeft="344.999981150032,238.333331675993" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="417.866647998824,97.9333329415983">
@@ -594,36 +602,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Data Flow Task\Derived Column 1"
-          TopLeft="344.999981150032,238.333331675993" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="423.599981150032,189.799998969436">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.5333327065574"
-              Start="0,0"
-              End="0,41.0333327065574">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.0333327065574" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="337.499981559814,320.666664436791" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
           TopLeft="424.449981354923,279.933331675993">
@@ -638,6 +616,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,33.2333327607976" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="423.599981150032,189.799998969436">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.5333327065574"
+              Start="0,0"
+              End="0,41.0333327065574">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.0333327065574" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

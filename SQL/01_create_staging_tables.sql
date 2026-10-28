@@ -1,19 +1,17 @@
--- Run on the SQL Server instance that will host Churn_Staging.
-/* =====================================================================
-   PART A - STAGING  (connect SSMS to your Churn_Staging instance)
-   Raw tables: every column VARCHAR(50), names = CSV headers, so the
-   Flat File sources map 1:1 with no conversion errors.
-   ===================================================================== */
+﻿IF DB_ID(N'Churn_Staging') IS NULL
+    EXEC(N'CREATE DATABASE [Churn_Staging]');
+GO
+
 USE Churn_Staging;
 GO
 
 DROP TABLE IF EXISTS dbo.stg_Churn_Master;
-DROP TABLE IF EXISTS dbo.stg_Churn_Complex;   -- old dataset, no longer used
+DROP TABLE IF EXISTS dbo.stg_Churn_Complex;
 DROP TABLE IF EXISTS dbo.stg_Churn_Telco;
 DROP TABLE IF EXISTS dbo.stg_Customer_All;
 GO
 
--- Dataset 1 (training + testing master)
+
 CREATE TABLE dbo.stg_Churn_Master (
     [CustomerID]        VARCHAR(50),
     [Age]               VARCHAR(50),
@@ -27,10 +25,10 @@ CREATE TABLE dbo.stg_Churn_Master (
     [Total Spend]       VARCHAR(50),
     [Last Interaction]  VARCHAR(50),
     [Churn]             VARCHAR(50),
-    [Source_File]       VARCHAR(100)          -- added in SSIS (Derived Column)
+    [Source_File]       VARCHAR(100)
 );
 
--- Dataset 2 (Telco)
+
 CREATE TABLE dbo.stg_Churn_Telco (
     [customerID]       VARCHAR(50),
     [gender]           VARCHAR(50),
@@ -56,19 +54,19 @@ CREATE TABLE dbo.stg_Churn_Telco (
     [Source_File]      VARCHAR(100)
 );
 
--- MERGED table: both datasets mapped to one common structure
+
 CREATE TABLE dbo.stg_Customer_All (
     StagingID          INT IDENTITY(1,1) PRIMARY KEY,
     Source_Dataset     VARCHAR(50),
     Source_File        VARCHAR(100),
-    Customer_ID        VARCHAR(20),     -- '12345' (Dataset 1) or '7590-VHVEG' (Telco)
+    Customer_ID        VARCHAR(20),
     Gender             VARCHAR(20),
-    Age                INT NULL,        -- Dataset 1 only
-    Senior_Citizen     VARCHAR(10),     -- Telco flag; Dataset 1 derived from Age >= 65
+    Age                INT NULL,
+    Senior_Citizen     VARCHAR(10),
     Partner            VARCHAR(10),
     Dependents         VARCHAR(10),
-    Subscription_Type  VARCHAR(30),     -- Dataset 1: Basic/Standard/Premium
-    Internet_Service   VARCHAR(30),     -- Telco: DSL/Fiber optic/No
+    Subscription_Type  VARCHAR(30),
+    Internet_Service   VARCHAR(30),
     Phone_Service      VARCHAR(30),
     Online_Security    VARCHAR(30),
     Tech_Support       VARCHAR(30),
@@ -83,7 +81,6 @@ CREATE TABLE dbo.stg_Customer_All (
     Last_Interaction   INT NULL,
     Monthly_Charges    DECIMAL(10,2) NULL,
     Total_Spend        DECIMAL(12,2) NULL,
-    Churn              INT NULL         -- 1 = churned, 0 = stayed (Telco Yes/No converted)
+    Churn              INT NULL
 );
 GO
-

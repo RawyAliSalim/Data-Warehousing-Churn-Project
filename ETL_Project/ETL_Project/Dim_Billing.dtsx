@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{8DF3F409-21B1-4875-8AB2-134717A20C3C}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{ECC7600A-84C0-457E-8715-BE8D46149D4D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -22,8 +22,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{A166EF7F-64EA-4E23-A92F-3FCA9F444D61}"
       DTS:ObjectName="Flat File Connection Manager">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\\WA_Fn-UseC_-Telco-Customer-Churn.csv"</DTS:PropertyExpression>
+            <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\WA_Fn-UseC_-Telco-Customer-Churn.csv"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -33,7 +33,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\asus\Documents\BUE Projects\Data mining and Wearhouse\Project\Data-Warehousing-Churn-Project\Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
+          DTS:ConnectionString="Data\WA_Fn-UseC_-Telco-Customer-Churn.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1555,6 +1555,10 @@
           Id="Package\ETL Dim_Billing\Telco CSV"
           TopLeft="357.374984269962,37.6578943837548" />
         <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\ETL Dim_Billing\OLE DB Destination"
+          TopLeft="339.374984828756,262.736839220465" />
+        <NodeLayout
           Size="156,42.6666666666667"
           Id="Package\ETL Dim_Billing\Derived Column"
           TopLeft="341.249984744937,154.631577249544" />
@@ -1580,10 +1584,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\ETL Dim_Billing\OLE DB Destination"
-          TopLeft="339.374984828756,262.736839220465" />
         <EdgeLayout
           Id="Package\ETL Dim_Billing.Paths[Derived Column Output]"
           TopLeft="422.979151453513,197.298243916211">

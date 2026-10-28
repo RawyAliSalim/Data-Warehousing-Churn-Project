@@ -12,8 +12,8 @@
   DTS:ObjectName="Dim_Spend_Profile"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{453F579D-C378-449F-96D4-98B8D9C69406}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{A4D5B5DE-8B92-4048-A5A6-C028C043EF5B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -22,6 +22,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{5AD4DABB-787B-4E72-BDAC-E3795E36D5E4}"
       DTS:ObjectName="Flat File Connection Manager">
+            <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\\customer_churn_dataset-training-master.csv"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -31,7 +33,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\lenovo_new\Desktop\mohamed\Data-Warehousing-Churn-Project\Data\customer_churn_dataset-training-master.csv">
+          DTS:ConnectionString="Data\customer_churn_dataset-training-master.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -145,6 +147,136 @@
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C423014D-D4B9-4879-898E-27BB83E89F65}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+            <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DataFolder] + "\\customer_churn_dataset-training-master.csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Data\customer_churn_dataset-training-master.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{4235D237-9FA4-4103-B9A5-9570454A219D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{B7138900-4B15-4C0A-8AA5-0C032F5B5FF7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{198BC95D-F96C-4A2C-BD1F-1B732A2F9775}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tenure"
+              DTS:DTSID="{1E76BDF9-0054-4057-BE8E-B76651BCC880}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Usage Frequency"
+              DTS:DTSID="{86DD5D6A-49CF-4EAC-A017-2E6C6D8D5FB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Support Calls"
+              DTS:DTSID="{2E90ACB6-20B5-4B9F-98B1-26E7F8DBAE04}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payment Delay"
+              DTS:DTSID="{EB8CB1E8-5ADC-4161-B36B-4A89B678EA1F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Subscription Type"
+              DTS:DTSID="{27799C44-770B-4BC0-9374-C114CC196C92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Length"
+              DTS:DTSID="{31283B77-DB8E-4320-B18A-48CE6BE248A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Spend"
+              DTS:DTSID="{F21E1417-7896-425D-9265-3454B09553C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Interaction"
+              DTS:DTSID="{86FFF62B-BEFF-4C2C-A55D-ACD7678F4D6F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Churn "
+              DTS:DTSID="{DCCD1DED-C826-4B66-83B2-E017BA0B4422}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
@@ -188,12 +320,12 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\ETL Dim_Spend_Profile\Conditional Split.Outputs[valid]"
+                  refId="Package\ETL Dim_Spend_Profile\Conditional Split.Outputs[Valid]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="valid"
+                  name="Valid"
                   synchronousInputId="Package\ETL Dim_Spend_Profile\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -201,13 +333,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\ETL Dim_Spend_Profile\Flat File Source.Outputs[Flat File Source Output].Columns[Churn ]} == "1"</property>
+                      name="Expression">[FINDSTRING]([LTRIM]([RTRIM](#{Package\ETL Dim_Spend_Profile\Flat File Source.Outputs[Flat File Source Output].Columns[Churn ]})),"1",1) == 1</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">[Churn ] == "1"</property>
+                      name="FriendlyExpression">FINDSTRING(LTRIM(RTRIM([Churn ])),"1",1) == 1</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -364,7 +496,7 @@
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
-              localeId="1033"
+              localeId="2057"
               name="Flat File Source"
               usesDispositions="true"
               version="1">
@@ -381,8 +513,8 @@
               <connections>
                 <connection
                   refId="Package\ETL Dim_Spend_Profile\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -776,7 +908,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Dim_Spend_Profile]</property>
+                  name="OpenRowset">[Dim_Spend_Profile]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1068,10 +1200,10 @@
               name="Flat File Source Output"
               startId="Package\ETL Dim_Spend_Profile\Flat File Source.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\ETL Dim_Spend_Profile.Paths[valid]"
+              refId="Package\ETL Dim_Spend_Profile.Paths[Valid]"
               endId="Package\ETL Dim_Spend_Profile\Derived Column.Inputs[Derived Column Input]"
-              name="valid"
-              startId="Package\ETL Dim_Spend_Profile\Conditional Split.Outputs[valid]" />
+              name="Valid"
+              startId="Package\ETL Dim_Spend_Profile\Conditional Split.Outputs[Valid]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1090,7 +1222,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="197,42"
+          Size="197.333333333334,42"
           Id="Package\ETL Dim_Spend_Profile"
           TopLeft="404,159" />
       </GraphLayout>
@@ -1106,12 +1238,20 @@
           Id="Package\ETL Dim_Spend_Profile\Flat File Source"
           TopLeft="457,91" />
         <NodeLayout
-          Size="159,42"
+          Size="158.666666666667,42"
           Id="Package\ETL Dim_Spend_Profile\Conditional Split"
           TopLeft="448,206" />
+        <NodeLayout
+          Size="177.333333333334,42"
+          Id="Package\ETL Dim_Spend_Profile\OLE DB Destination"
+          TopLeft="446,416" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\ETL Dim_Spend_Profile\Derived Column"
+          TopLeft="454,312" />
         <EdgeLayout
           Id="Package\ETL Dim_Spend_Profile.Paths[Flat File Source Output]"
-          TopLeft="531.25,133">
+          TopLeft="531.166666666667,133">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1128,41 +1268,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="158,42"
-          Id="Package\ETL Dim_Spend_Profile\Derived Column"
-          TopLeft="454,312" />
-        <EdgeLayout
-          Id="Package\ETL Dim_Spend_Profile.Paths[valid]"
-          TopLeft="530.25,248">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64"
-              Start="0,0"
-              End="0,56.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-10.8219921875,23.37548828125,21.643984375,9.7490234375"
+              BoundingBox="-30.72357421875,27.12841796875,61.4471484375,11.2431640625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\ETL Dim_Spend_Profile\OLE DB Destination"
-          TopLeft="446,416" />
         <EdgeLayout
           Id="Package\ETL Dim_Spend_Profile.Paths[Derived Column Output]"
           TopLeft="533.75,354">
@@ -1182,7 +1292,33 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-30.5551171875,21.6357421875,61.110234375,11.228515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Dim_Spend_Profile.Paths[Valid]"
+          TopLeft="530.166666666667,248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-46.729921875,22.4453125,93.45984375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
